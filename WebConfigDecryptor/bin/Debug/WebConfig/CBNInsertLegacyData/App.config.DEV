@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<configuration>
+  <configSections>
+    <!-- For more information on Entity Framework configuration, visit http://go.microsoft.com/fwlink/?LinkID=237468 -->
+    <section name="entityFramework" type="System.Data.Entity.Internal.ConfigFile.EntityFrameworkSection, EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" requirePermission="false" />
+  </configSections>
+  <connectionStrings>
+    <add name="SOMSEntities" connectionString="tSDbEx/I8qfp1lE5Fgj3fXwQ6LfNwEc7O1sQSUOAzutmVzdOqjyPED2Q7vXydx7IUhzWTQPGpfyoKPoXSbg7tPxMwq5D7a50Mv1ZsQVXiJy9BVz0WWt2t6/Zeu/nI9mWB13nxxlDl4d1oqh2r5e9uSQsDzrKsCtYUmmM6cekEodx4TkRN3mxlBgKPgXxR3iEr8OuynPC5PxlcILi/PEPX37pX43nebHFw4z0i4c8UdioB1G69/6ny1WseszMcto8aAuVs+l84mgN6uBylx5t2Ptw55oJZeAku3EohqOcbXPUWxX2ZQg40d+WQ/UESAq54M1oiq6AM0YqynLF650Wx5IGPkk/FopkZriYrAkud8DC1YjhNYlI61RwtUfddBL68s0t2NtZAHM2m+EM5d9FOekvoGcF1hYrkmnbWBJK3/Ub5ZtfyKIWuxTRBn8ilOHDcVVRoRcRP/Hesc4NmgyLp+f5oVtFHuzVDKId3A1NvqJBlc0cERaae6jnxZz8taxhCBwHHKai30HMCnVVyTuvMwgoVOB2o1kBnwBCaEESGwlRJY0ZCKSo7JKLoRuhH38QnVO+pMOtpl403D/1p+9Qh4BPRg7ASIASPLUCkWzrPJHQBXe0VTy/qZ3UUgNpzO+wMisyTVhUZFqWA87QqAJ+dOmx1esaeQE1VzjoroFlOcg/2dhDRtzpHWB+ZcDd7Zt4aFHHNVNCxmpULOMcUi5t7nAWU0xyR4NhLGFSRXbS7BJlDQGY0nCapSJgm0wInJvQLFMzLEJX+cEn7Y2L1jP95hlzQ+4tEObSQkEheFO8ck/bUemoRSdgZpa7089MTyQzD8mXJAFH+d+oDXcs7/ZvtA==" providerName="System.Data.EntityClient" />
+    
+    <add name="TDB2DataEntities" connectionString="tSDbEx/I8qfp1lE5Fgj3fXwQ6LfNwEc7O1sQSUOAzutmVzdOqjyPECizxpKAjVuqaEoqA6aKafxDRa7hM5rGBEbEjRlAZrG4Psi5tm0Vo+gayNhPlcouizAO1SGPbMVt0jDvLHTxLvqjD8bd2BLntHQ2oydcPIA38i/uj+kJngoHNLAaTwq4fmRanREYvQo0mh2eKcIY5LjwvNi9TaXE193hmnH2VPklmiQWnpSxdHDl26WnVew1Zn5plUFjPbgf5dy/ZI59SA+I4sM2eeiBcB91gojJMc3qn6v9ibgIXWF5G1tJsgOkwGM99g8u5S9ss0q3Q+0e+EIpTbNl27zXT28bZR6uZyis4pnUpHL6CvBNg7Z4JQmht38zdXL24CeSZuGTB3GatqQNQFcXsvC4RWl9oCWUhpqYU5qWodxLv3fK+XdOOT5ki/un12rvL8DtY9Zvv2F51gGw6eZ/l4WAS75aX3Ta9lVuvQm2cK2HTMBca7Kq7PFo5IHMN74pYdEBJx//mAL4lORZyEcmJmycl4D9UOPhKr6nJamu//QsImld0jsIZ2KhxYjz7gJ594XKTPOLmQE7+JBIEzMmMy/fYp9qsbs0hDUaTcE/fe0TkjcrNlkpAG/gZyqVlGPyaDJh4PMv7pqWPKPKM1g1CjtIV7WKLgrAxQxGssoNjL0mzgFeoVSGPg++ldsKlzuGQhEs3JI129MluoVoqkYbT4T/8A==" providerName="System.Data.EntityClient" />
+  </connectionStrings>
+  <appSettings>
+    <add key="Log" value="1" />
+    <add key="LogFolderPath" value="D:\Weblogs\Webapplogs\CBNInsertLegacyData" />
+    <add key="Defaultschema" value="TESTDB2" />
+    <add key="logOnOff" value="on" />
+    <add key="TracelogOnOff" value="on" />
+    <add key="ApplyTracelogOnOff" value="off" />
+    <!--IMSService Settings Start-->
+    <add key="Host" value="ftlsysb.freightliner.com" />
+    <add key="Port" value="32000" />
+    <add key="Destination" value="TIMS" />
+    <add key="UserName" value="APP0090"/>
+    <add key="Password" value="gTGi+GBdCL+WwVQkU4w2gsV7T1v9te/d"/>
+    <add key="ThreadSendReceiveTimeOut" value="100"/>
+    <add key="ThreadReadTimeOut" value="100"/>
+    <!--IMSService Settings End-->
+    <add key="EmailFrom" value="CBN@daimlertruck.com" />
+    <add key="MailsTo" value="SCS-CAE-App-Support@daimlertruck.com" />
+    <add key="EmailFromName" value="CBN Import" />
+    <add key="Environment" value="DEV" />
+    <add key="emailOnoff" value="on" />
+    <add key="TCOCORPSKEY" value="TCOCORP_SKEY" />
+    <add key="TCOCORPSIV" value="TCOCORP_SIV" />
+  </appSettings>
+  <system.web>
+    <compilation debug="true" targetFramework="4.0">
+      <assemblies>
+        <add assembly="System.Data.Entity, Version=4.0.0.0, Culture=neutral, PublicKeyToken=B77A5C561934E089" />
+        <add assembly="System.Data.Services, Version=4.0.0.0, Culture=neutral, PublicKeyToken=B77A5C561934E089" />
+        <add assembly="System.Data.Services.Client, Version=4.0.0.0, Culture=neutral, PublicKeyToken=B77A5C561934E089" />
+      </assemblies>
+    </compilation>
+  </system.web>
+  <system.net>
+    <mailSettings>
+      <smtp deliveryMethod="Network">
+        <network host="mail.us164.corpintra.net" port="25" />
+      </smtp>
+    </mailSettings>
+  </system.net>
+  <entityFramework>
+    <defaultConnectionFactory type="System.Data.Entity.Infrastructure.SqlConnectionFactory, EntityFramework" />
+    <providers>
+      <provider invariantName="System.Data.SqlClient" type="System.Data.Entity.SqlServer.SqlProviderServices, EntityFramework.SqlServer" />
+		<provider invariantName="IBM.Data.DB2" type="IBM.Data.DB2.EntityFramework.DB2ProviderServices, IBM.Data.DB2.EntityFramework, Version=10.5.5.6, Culture=neutral, PublicKeyToken=7c307b91aa13d208"/>
+	</providers>
+  </entityFramework>
+  <startup>
+    <supportedRuntime version="v4.0" sku=".NETFramework,Version=v4.5.2" />
+  </startup>
+</configuration>

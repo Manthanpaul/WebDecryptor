@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- For more information on using transformations 
+     see the web.config examples at http://go.microsoft.com/fwlink/?LinkId=214134. -->
+<configuration xmlns:xdt="http://schemas.microsoft.com/XML-Document-Transform">
+  
+  <appSettings>
+    <add key="Environment" value="Dev" xdt:Transform="Replace" xdt:Locator="Match(key)" />    
+  </appSettings> 
+<connectionStrings>
+    <add name="DEV_DB2Connection" connectionString="Pe5zIETlpC5X3AdYofhDXoNvv9xc+J6pETf5PZkGEuBm41JU/cvOC4Lc6P3x8E+4lj8H9lEm4r8Gw5X6abU3T+XiSHSUkxcJ2QhISGwdirmFmDQb7Z5IK3/O1uv1AqpGBZ8gf1mijWb3W2zBjumOnojkauGBE9bxi6LMyiubdUTyWUo/fHPDXDU7f0rLSH0h2X+M+kHHSavWqB1LIP5cRTbPZB/vXS3gL8okr6BMJ6I=" providerName="System.Data.Odbc" />
+  </connectionStrings> 
+   
+</configuration>

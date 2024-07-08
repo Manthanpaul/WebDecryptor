@@ -1,0 +1,96 @@
+<?xml version="1.0"?>
+<configuration>
+  <configSections>
+    <section name="entityFramework"
+      type="System.Data.Entity.Internal.ConfigFile.EntityFrameworkSection, EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"
+      requirePermission="false"/>
+  </configSections>
+  <connectionStrings>
+    <add name="ConcessionGuidelineEntities"
+      connectionString="5mreXmxD+Jt/em+u4hCdIhA1KZKjTiKN2SmuBZ4FjZ4cv0yvRSFRsFbt9N+3QRkFhrM7xUTZPdqCoWZiVxlc2IfOGzTZTxfxmytRICOm/2H39Gs0IhfGHPXPUiRJY/cqaqDNDXi1LkRGcotntBeR7eSWXTsFkbO0KyJwxUWHIiMQj4LObYKoJf2ym+VMHzNxlbqE+sV6rernbroOSxnrYd68IePVUqUeGCYfk5GIs5fI/yRYlNn+b78kkNhMxrpijatAikmTfZGZbnxxlAUjGeQNxaQJKlPtTVh6SLX/vHeVj6ex9EKtT3BWaruwJuG+VtTEfwHZcMyaV5EygHFRkhjMQ/D2HFt0nf2mKuxgc5TrOR/6HGu0Bra/hcAYkkvizg0R2GeaXQ27D5rRDk+Yp62T+0cJql4JD/jZ4stolq5xuxlSUUJGO2ZKPRaU1okzdz48QmkALvkNvqaFRbG8AvTQe6whWQmjvAeagW4ltYfmuXvyyVQZe946sETj71m4j2JZj0f9oXXTHDjDFLxhmiSYQl7eaJuYTfBDAr09TSmKe1iJfUr7JNfF+x5UiVGnhCNmQb3Q9u9js7GNqn4XOMQ3rFCJDd0dkgiXg7npROAz87nayFBaMofgkc/vQ0s3cDAnUYpHa7evnpreWbcBvH5uLJHPGv+WrFAmJZdRW17ufvAk2isN9AgCWt7gJcKo"
+      providerName="System.Data.EntityClient"/>
+    <add name="ConcessionGuidelineConnection"
+      connectionString="po3R6et749JJNei7QDj0rC7ZBY07Q49N7vLv2nbVjiDM2khdEIAhsuew05mDcH7SAc6rVdMHyote48pMDTzIBF9c6Dvnh9G5Nub7lkE6UNCt9bfl9NNcj+yU8sffFki1BEGgt9uxbzec5cjHft3f28sYsGt13dtoFOY7U4a1pd1dLCSkyewZ4STCqRBmqA3ASA+zz9PJ9jw97+DYUh961XtRo5uJ3+mqyLwUhMF82OQ3m3puOqjEb5OyO6yTCq/D"/>
+  </connectionStrings>
+  <appSettings>
+    <add key="ConnectionSchema" value="PRODDB2"/>
+    <add key="Log" value="1"/>
+    <add key="LogFolderPath" value="D:\Weblogs\Webapplogs\SMF-1138\CGM-Services"/>
+    <add key="Defaultschema" value="PRODDB2"/>
+    <add key="CGMSKEY" value="11488_SKEY"/>
+    <add key="CGMSIV" value="11488_SIV"/>
+  </appSettings>
+  <!--
+    For a description of web.config changes see http://go.microsoft.com/fwlink/?LinkId=235367.
+
+    The following attributes can be set on the <httpRuntime> tag.
+      <system.Web>
+        <httpRuntime targetFramework="4.6.2" />
+      </system.Web>
+  -->
+  <system.web>
+    <compilation targetFramework="4.6.2"/>
+    <customErrors mode="Off"/>
+    <httpModules>
+      <add name="ApplicationInsightsWebTracking" type="Microsoft.ApplicationInsights.Web.ApplicationInsightsHttpModule, Microsoft.AI.Web"/>
+    </httpModules>
+    <pages controlRenderingCompatibilityVersion="4.0"/>
+  </system.web>
+  <system.serviceModel>
+    <services>
+      <service name="Daimler.OrderProcessing.ConcessionGuideline.BusinessService.ConcessionGuidelineService"
+        behaviorConfiguration="ConcessionGuidelineServiceBehavior">
+        <endpoint binding="basicHttpBinding" contract="Daimler.OrderProcessing.ConcessionGuideline.BusinessService.IConcessionGuidelineService"
+          bindingConfiguration="BasicHttpBinding"/>
+        <endpoint contract="IMetadataExchange" binding="mexHttpBinding" address="mex"/>
+      </service>
+    </services>
+    <behaviors>
+      <serviceBehaviors>
+        <behavior name="ConcessionGuidelineServiceBehavior">
+          <!-- To avoid disclosing metadata information, set the value below to false and remove the metadata endpoint above before deployment -->
+          <serviceMetadata httpGetEnabled="true"/>
+          <!-- To receive exception details in faults for debugging purposes, set the value below to true.  Set to false before deployment to avoid disclosing exception information -->
+          <serviceDebug includeExceptionDetailInFaults="true"/>
+          <dataContractSerializer maxItemsInObjectGraph="2147483646"/>
+        </behavior>
+      </serviceBehaviors>
+      <endpointBehaviors/>
+    </behaviors>
+    <serviceHostingEnvironment multipleSiteBindingsEnabled="true"/>
+    <bindings>
+      <basicHttpBinding>
+        <binding name="BasicHttpBinding" closeTimeout="00:40:00" openTimeout="00:40:00" receiveTimeout="00:40:00" sendTimeout="00:40:00"
+          bypassProxyOnLocal="true" hostNameComparisonMode="StrongWildcard" maxBufferPoolSize="2147483647" maxReceivedMessageSize="2147483647"
+          messageEncoding="Text" textEncoding="utf-8" useDefaultWebProxy="true" allowCookies="false">
+          <readerQuotas maxDepth="32" maxStringContentLength="8192" maxArrayLength="16384" maxBytesPerRead="4096" maxNameTableCharCount="16384"/>
+          <security mode="None">
+            <transport clientCredentialType="Windows" proxyCredentialType="None" realm=""/>
+          </security>
+        </binding>
+      </basicHttpBinding>
+
+    </bindings>
+  </system.serviceModel>
+  <system.webServer>
+    <validation validateIntegratedModeConfiguration="false"/>
+    <modules runAllManagedModulesForAllRequests="true"/>
+  </system.webServer>
+  <system.diagnostics>
+    <sources>
+      <source name="System.ServiceModel" switchValue="Information, ActivityTracing" propagateActivity="true">
+        <listeners>
+          <add name="traceListener" type="System.Diagnostics.XmlWriterTraceListener" initializeData="D:\Weblogs\Webapplogs\SMF-1138\CGM\Traces.svclog"/>
+        </listeners>
+      </source>
+    </sources>
+  </system.diagnostics>
+  <entityFramework>
+    <defaultConnectionFactory type="System.Data.Entity.Infrastructure.SqlConnectionFactory, EntityFramework"/>
+    <providers>
+      <provider invariantName="IBM.Data.DB2"
+        type="IBM.Data.DB2.EntityFramework.DB2ProviderServices, IBM.Data.DB2.EntityFramework, Version=10.5.5.6, Culture=neutral, PublicKeyToken=7c307b91aa13d208"/>
+      <provider invariantName="System.Data.SqlClient" type="System.Data.Entity.SqlServer.SqlProviderServices, EntityFramework.SqlServer"/>
+    </providers>
+  </entityFramework>
+</configuration>

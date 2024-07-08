@@ -1,0 +1,131 @@
+<?xml version="1.0"?>
+
+<!--
+  For more information on how to configure your ASP.NET application, please visit
+  http://go.microsoft.com/fwlink/?LinkId=169433
+  -->
+
+<configuration>
+  <appSettings>
+    <add key="BranchName" value="QA"/>
+    <add key="Schema" value="TESTDB2"/>
+    <add key="Log" value="1"/>
+    <add key="LogFolderPath" value="D:\Weblogs\Webapplogs\11790-DOAPriceWalk-Services"/>
+    <add key="TireCodes" value="093-527,094-528,095-529,096-530"/>
+    <add key ="CPFACTOR" value="0.1248"/>
+    <add key ="CPFACTOR2" value="1.1248"/>
+    <add key ="FACTOR1" value="0.04"/>
+    <add key ="FACTOR2" value="0.12"/>
+    <add key="CADCNTRYCODE" value="000"></add>
+    <add key="FETDBCD" value="RTX-001"/>
+    <add key="LENDBCD" value="AE4-99D"/>
+    <add key="AppID" value="APPRWLK"/>
+    <add key="AppIDPWD" value="h6KNUanJ5XufigOjB51X/aDjrAPv68Mf"/>
+    <add key="AppPortfolioID" value="APP-12412"/>
+    <add key="SOAPSvcAccID" value="DTNA_cvd_s_PrWlk-QA"/>
+    <add key="SOAPSvcAccPWD" value="V8G7ioETQ/Q8+zJxegHH0URMnyuyJrJU/7nX+Vioi4Cn1y+Jsxz6tTuaOZQzFUV6"/>
+    <add key="SecurityHeaderToken" value="APPRWLK"/>
+    <add key="CDOSKEY" value="1271_SKEY"/>
+    <add key="CDOSIV" value="1271_SIV"/>
+    <!--TESTDB2,PRODDB2-->
+  </appSettings>
+  <connectionStrings>
+    <clear/>
+    <add name="DB2Connection" connectionString="OlRDC8BkdML84GJ2j4PfdBWaLJ566Zo5r6ABQ8YnTU8Fsyw45E/pOp5hjTe/mjzEyToiJe1ECyPXkXFZlCG5maiq8ddpZdoxkhZXfy1Ew3FJRpIZydI0tPdW9eWcUBuKjFQy6IiiRGvEZSux5Ew1N0G12Xs3J+R/4vzxURHTVd6fNH7MBUnqaQv6Qf/AonZltU6m2dt6mFGWazeuruWJlY/dv99pOmzO+OhkMUbV8oLEHArvhUfiGS77zNyGS+zN" />
+    <add name="SOLConnection" connectionString="OlRDC8BkdMJNgyEAWetPiPkLscZxWdnaIM6hGiOgt2WKzuUiY4NX+UDmaHy9125WZjS+1UXQELkHdoOOUOcpx7fHTkZ1BoPleZ+ivwgJM9Rr9bNwvK5OMbmKuhiIj98BrXonG0vIxw8OMhPsIs13WwFKWBF8a4A+6JeGZCcmc5EuDXeG0l4aaONnoUikLftQzz552GcZ48IIgR0kKGpCotY4qQSMNQpxb4KB4GiMXDc="/>
+    <add name="PriceWeightConnection" connectionString="OlRDC8BkdMJNgyEAWetPiPkLscZxWdnaIM6hGiOgt2WKzuUiY4NX+UDmaHy9125WZjS+1UXQELkHdoOOUOcpx7fHTkZ1BoPllnTpGlWbs7m384lXPK/NFFt0IChwOCYRi7aTkC5GSi9VcGoVQjxYbk+93P2nP+s+mZKqXd/0X/ptWs0KqWkdd9j/76J9R581rbMJbGWr2rvf8fp1zuiefT2xl4et8QXlvWStyycPIEXF89KM2v9epA=="  />
+    <add name="OBlSqlConnection" connectionString="OlRDC8BkdMJNgyEAWetPiPkLscZxWdnaIV4gXkyehM1z3GKmwUuW9YIAJm7K6Ztwi19l3E5kTvH0pN1AlI5pFatDuBV+WITDeUjrL88DDlQv0GZyXwyt7+AkUNLeloG9V9Z+2g3UZhG7dVI9yZE3WQo0CnWXu5F+1JUbCx2qbodSpOUPXcEapsYgk223gWhjZxb9s6L3mm//39skjhAFMgym1hc5RPThsc/dTcdnp64gLMp/p8YdvpduWtRTL0jmNf+/7B1ooXm1xt51W2CGFQ=="/>
+  </connectionStrings>
+  <system.web>
+    <compilation debug="true" targetFramework="4.0" >
+      <assemblies>
+        <add assembly="System.Data.Entity, Version=4.0.0.0, Culture=neutral, PublicKeyToken=B77A5C561934E089" />
+        <add assembly="System.Data.Services, Version=4.0.0.0, Culture=neutral, PublicKeyToken=B77A5C561934E089" />
+        <add assembly="System.Data.Services.Client, Version=4.0.0.0, Culture=neutral, PublicKeyToken=B77A5C561934E089" />
+      </assemblies>
+    </compilation>
+    <customErrors mode="Off"/>
+  </system.web>
+  <system.webServer>
+    <modules runAllManagedModulesForAllRequests="true"/>
+  </system.webServer>
+  <system.serviceModel>
+    <services>
+      <service name="Daimler.SCS.DOA.PWServices.CDOPriceWalkService" behaviorConfiguration="ConcessionGuidelineServiceBehavior">
+        <endpoint binding="basicHttpBinding" contract="Daimler.SCS.DOA.PWServices.ICDOPriceWalkService" bindingConfiguration="BasicHttpBinding"/>
+      </service>
+    </services>
+    <behaviors>
+      <serviceBehaviors>
+        <behavior name="ConcessionGuidelineServiceBehavior">
+          <serviceMetadata httpGetEnabled="true" />
+          <serviceDebug includeExceptionDetailInFaults="true" />
+          <dataContractSerializer maxItemsInObjectGraph="2147483646" />
+        </behavior>
+      </serviceBehaviors>
+      <!--"34730ece250dc3fbc37600adac4fa33227642531"-->
+      <endpointBehaviors>
+        <behavior name="ClientCertBehavior">
+          <clientCredentials>
+            <clientCertificate storeLocation="LocalMachine"
+                               storeName="My"
+                               findValue="5c9a4bf598938a09c1ff77401f5e98599da76f69"
+                               x509FindType="FindByThumbprint" />
+            <serviceCertificate>
+              <authentication revocationMode="NoCheck" certificateValidationMode="None" />
+            </serviceCertificate>
+          </clientCredentials>
+        </behavior>
+      </endpointBehaviors>
+    </behaviors>
+    <serviceHostingEnvironment multipleSiteBindingsEnabled="true"></serviceHostingEnvironment>
+    <bindings>
+      <basicHttpBinding>
+        <binding name="BasicHttpBinding" closeTimeout="00:40:00" openTimeout="00:40:00"
+					receiveTimeout="00:40:00" sendTimeout="00:40:00" bypassProxyOnLocal="true"
+					hostNameComparisonMode="StrongWildcard"
+					maxBufferPoolSize="2147483647" maxReceivedMessageSize="2147483647"
+					messageEncoding="Text" textEncoding="utf-8" useDefaultWebProxy="true"
+					allowCookies="false">
+          <readerQuotas maxDepth="32" maxStringContentLength="8192" maxArrayLength="16384"
+						maxBytesPerRead="4096" maxNameTableCharCount="16384" />
+          <security mode="None">
+            <transport clientCredentialType="Windows" proxyCredentialType="None"
+							realm="" />
+          </security>
+        </binding>
+      </basicHttpBinding>
+      <wsHttpBinding>
+        <binding name="SOAP12_WSBinding" maxReceivedMessageSize="2147483647" maxBufferPoolSize="2147483647" closeTimeout="00:40:00"
+      openTimeout="00:40:00" receiveTimeout="01:40:00" sendTimeout="00:40:00"
+      allowCookies="false" bypassProxyOnLocal="false" >
+          <readerQuotas maxDepth="2147483647" maxStringContentLength="2147483647" maxArrayLength="2147483647"
+             maxBytesPerRead="2147483647" maxNameTableCharCount="2147483647" />
+          <security mode="Transport">
+            <transport clientCredentialType="Certificate"/>
+          </security>
+        </binding>
+      </wsHttpBinding>
+      <customBinding>
+        <binding name="IIB_IMS_Generic_SOAP_HTTP_Service_new" closeTimeout="00:01:00"
+          openTimeout="00:01:00" receiveTimeout="00:01:00" sendTimeout="00:10:00">
+          <textMessageEncoding messageVersion="Soap12" />
+          <httpsTransport />
+        </binding>     
+      </customBinding>
+    </bindings>
+    <client>
+      <endpoint address="https://dtna-eai-ims-test.us164.corpintra.net:48482/ws/Sales/CDO/PublishPrice"
+          binding="wsHttpBinding" bindingConfiguration="SOAP12_WSBinding" behaviorConfiguration="ClientCertBehavior"
+          contract="WBIService.CDO_PublishPrice" name="CDO_PublishPrice12_Port" />
+      <endpoint address="https://dtna-eai-ims-test.us164.corpintra.net:48483/IIBGeneric_SOAPService"
+        binding="customBinding" bindingConfiguration="IIB_IMS_Generic_SOAP_HTTP_Service_new"
+        contract="IIBService.IIB_IMS_Generic_SOAP_HTTP_Service_new"
+        name="IIBGeneric" />
+      <!--<endpoint address="https://dtna-eai-ims-test.us164.corpintra.net:48483/IIBGeneric_SOAPService"
+          binding="customBinding" bindingConfiguration="iib_ims_generic_service_SOAP12_HTTP_Binding"
+          contract="IIBTest.iib_ims_generic_service_pT" name="pwmsService" />-->
+    </client>
+    <!--<serviceHostingEnvironment multipleSiteBindingsEnabled="true"  />-->
+  </system.serviceModel>
+</configuration>

@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+  For more information on how to configure your ASP.NET application, please visit
+  https://go.microsoft.com/fwlink/?LinkId=169433
+  -->
+<configuration>
+  <configSections>
+    <section name="entityFramework"
+      type="System.Data.Entity.Internal.ConfigFile.EntityFrameworkSection, EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"
+      requirePermission="false"/>
+  </configSections>
+  <connectionStrings>
+    <add name="SOMSEntities"
+      connectionString="loWfP1wcSD5m5iED4peet1TUQNZ+4/a7LGHtkS71IXeFsNYz85KJjm8bn8yX8hSIm1CO899w4C2OeB+2gf21fvAz+F4+bY8QVzcZxa3QMBlVx0issxk/k1L416LGVHPVCLE2YUf6ga4aDuLLnM8m8iGpc1ifXHxecpAx026mnkxla01v+sCsUs1QO4z9sQ8CKZs/A77uUOZ0q/m0YtCneRMi6GXOyM/SXYXJoGBusxIjqTZS/ziSCVIQyUXtSRmrHqVgY0ybVvtD4wIFAX/Qu4ZUznMGFOEtMxNxLQKFmy9v4/m1hZUCbzHv0DuN1/mrB0tyhwp/ekAPecZaUDMwv6uL6uzTkboEryywHwdiGn/PX9oOHk09YgfsA15yACU8W7AWxRZKKDbXX7fMJxWCwa2ORPKl5tTdWb2bMwDYLKHKMVQsw0qRc/G6A0qY2BINvtjiaIfaUZ64wF5jdiAFSUz0WouwwG7Ms4JhuMKucH+VKCtFYfUaFcOZ0TB9b5AKc0xXA2OwvbOIBoFrgqYahTd2ZmCwVpYvcGF+CHB2n7XDlWMPL/coDtjHLi/lzLIv3E4jaUhg5jqgRjfR0H1WO0bmJ3Xk3lBdE2qOMtmvo35/J8EDe6OVtszQ2hLfId4aitQ1XRwGwKD966Bt77lS2waHSMBLIeoggMKuUB27ShgLArRHd+NJj5cxKn3e2LFY6EzLaDW5L2+I+WjhFZONqpn/nXrmZaioXg3tsieIdxqNY1jwE4Fg2BDs4KJTVQdgjkWp7UUFvo2xD07jIutbxOOdxNJ46Mcjyxsoh8LnfcjTDpx31Bija7ZRIDg3t2XvlyEgrpNkq21byUM2xLY377bsNKdQ7Ibp0LocAiDCi7136ASnyqV7MPx/3mQco3QL"
+      providerName="System.Data.EntityClient"/>
+    <add name="TDB2DataEntities"
+      connectionString="loWfP1wcSD5m5iED4peet1TUQNZ+4/a7LGHtkS71IXeFsNYz85KJjp/d0MhilLQK5VbfaCmMfOHnczPfcdnusyhOHqqxxv/oMgukYHxXFgIzmTpee7a4EVBiXjNWd8LCdcOOLFdQfkgZmk4v/ueKe/3EHSTLG/W8srGRzeRkijiYi01jRrMSWdsYP5temqOrlDFAlZYVBQaeCeM5H6jLouEcCHsjtPZlSuYrU2RQ9lO92zF8FxA7R8MRZpinvu/MzmR6uiNWsLZ69sjjMCa8IK+2g3bul2NwlriBz96Nm1X5wPWe7Pt/jaLmKYItBgr08N2HI1lQlUGk70XCTqBfNz8iYVIKCrkB+2IfPYXGx1+fA7CtTZxJ62/Zp7yjmhAyx4GhNE1+AfwM9Z4I3g1sYMl8eqmeOVU/yLAdG/E+owf8vlyUlAMddykRXP3htphhODwfiSgftoWoauRqPW5UqAuamCe6FPJ//D9sgIzFHi5/gtGK1hEIsP8CgiCyeKHhVsKP5PCm0/Rlp7iEaekFo2uNsydnvqsc1NsBtpfYxpR98D+/futyUOd1/g3sKzLE0Z4/pXAPS0HMctl1Dh9Hbv5O0mlaYOTDpWPleZj/utyKVoKTMIllNu9ZvkXBO1C/TFd04G0jm6muJYxjrDISPu5iSF5W18C0u62xg/ZnBUKst/1mRJ2GIu+PDmzJWJdh8CabkLr7x1xsuffRcMpuFQ=="
+      providerName="System.Data.EntityClient"/>
+  </connectionStrings>
+  <appSettings>
+    <add key="Log" value="0"/>
+    <add key="BranchName" value="PROD"/>
+    <add key="LogFolderPath" value="D:\Weblogs\Webapplogs\ShippingChangeOrderServices"/>
+    <add key="Defaultschema" value="PRODDB2"/>
+    <add key="CORPSCOSKEY" value="1210_SKEY"/>
+    <add key="CORPSCOSIV" value="1210_SIV"/>
+  </appSettings>
+  <system.web>
+    <customErrors mode="RemoteOnly"/>
+    <compilation targetFramework="4.6.2"/>
+    <httpRuntime executionTimeout="900" maxRequestLength="2147483647" targetFramework="4.6.2"/>
+  </system.web>
+  <system.codedom>
+    <compilers>
+      <compiler language="c#;cs;csharp" extension=".cs"
+        type="Microsoft.CodeDom.Providers.DotNetCompilerPlatform.CSharpCodeProvider, Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35"
+        warningLevel="4" compilerOptions="/langversion:default /nowarn:1659;1699;1701"/>
+      <compiler language="vb;vbs;visualbasic;vbscript" extension=".vb"
+        type="Microsoft.CodeDom.Providers.DotNetCompilerPlatform.VBCodeProvider, Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35"
+        warningLevel="4" compilerOptions="/langversion:default /nowarn:41008 /define:_MYTYPE=\&quot;Web\&quot; /optionInfer+"/>
+    </compilers>
+  </system.codedom>
+  <system.serviceModel>
+    <behaviors>
+      <serviceBehaviors>
+        <behavior name="">
+          <dataContractSerializer maxItemsInObjectGraph="2147483647"/>
+          <serviceMetadata httpGetEnabled="true" httpsGetEnabled="true"/>
+          <serviceDebug includeExceptionDetailInFaults="false"/>
+        </behavior>
+      </serviceBehaviors>
+    </behaviors>
+    <serviceHostingEnvironment aspNetCompatibilityEnabled="true" multipleSiteBindingsEnabled="true"/>    
+  </system.serviceModel>
+  <system.webServer>
+    <modules runAllManagedModulesForAllRequests="true"/>
+  </system.webServer>
+  <entityFramework>
+    <defaultConnectionFactory type="System.Data.Entity.Infrastructure.SqlConnectionFactory, EntityFramework"/>
+    <providers>
+      <provider invariantName="IBM.Data.DB2"
+        type="IBM.Data.DB2.EntityFramework.DB2ProviderServices, IBM.Data.DB2.EntityFramework, Version=10.5.5.6, Culture=neutral, PublicKeyToken=7c307b91aa13d208"/>
+      <provider invariantName="System.Data.SqlClient" type="System.Data.Entity.SqlServer.SqlProviderServices, EntityFramework.SqlServer"/>
+    </providers>
+  </entityFramework>
+</configuration>

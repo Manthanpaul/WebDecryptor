@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31009.304
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebConfigDecryptor", "WebConfigDecryptor\WebConfigDecryptor.csproj", "{FBE36446-1E0A-44F4-895B-8C3C87F89B02}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FBE36446-1E0A-44F4-895B-8C3C87F89B02}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FBE36446-1E0A-44F4-895B-8C3C87F89B02}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FBE36446-1E0A-44F4-895B-8C3C87F89B02}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FBE36446-1E0A-44F4-895B-8C3C87F89B02}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {00AB8D16-3F5D-4E14-9903-EC47D56B32E3}
+	EndGlobalSection
+EndGlobal

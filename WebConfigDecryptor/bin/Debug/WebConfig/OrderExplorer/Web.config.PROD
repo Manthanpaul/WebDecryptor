@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+  For more information on how to configure your ASP.NET application, please visit
+  http://go.microsoft.com/fwlink/?LinkId=169433
+  -->
+<configuration>
+  <appSettings>
+    <add key="Schema" value="PRODDB2"/>
+    <add key="BypassSiteMinder" value="0" />
+    <add key="TestUserId" value="SRNEELI" />
+    <add key="Log" value="0"/>
+    <add key="LogFolderPath" value="D:\Weblogs\Webapplogs\OrderExplorer"/>
+    <add key="AndCodes" value="7"/>
+    <add key="OrCodes" value="2"/>
+    <add key="ORDEXPSKEY" value="27340_SKEY" />
+    <add key="ORDEXPSIV" value="27340_SIV" />
+    <add key="BranchName" value="PROD" />
+	<add key="fromMail" value="DO-NOT-REPLY@daimlertruck.com"/>
+	<add key="Host" value="mail.us164.corpintra.net"/>
+	<add key="Port" value="25"/>
+  </appSettings>
+  <connectionStrings>
+    <add name="DB2Connection" connectionString="GwADM9G4W++8+BJSkM4u4RcejttQswu7ohTSAuFtb9f/7wv7N/VRS/91h6o6HLGkKV0armrdf8OxnINFcM4nF9YzRNkNs5S/WdxSafTGcVX9uvHhosvsG372YIddJkLgmWnioAOghOh/8k9KqBNGbH6+xaZhDbYGQLYvUAHFDaqUbh8OYuSNSKCHmVDStBktbkXuKQocjxOdZ7kNnMtnfN8cEWRmjnHzpq1PTYzRDg+1M6y32piDcA==" />
+    <add name="SQLCOSConnection" connectionString="GwADM9G4W+8LlqOZcNuxND5GjvfAeSw4rErPw7gcJ0HFyNDrPDEdoTqfYbRzRzDGr4cwAHWmnb/q7jWlfSNYbB+lg1qS8OQr787TjA8HhESm8ZK4Yhuzt3p2JSeF0CLj5+gGduNuIBce4jXp3QvP3IpziPFXQDWPRaPwUZzkTOu5unjzNLDQCaB4YmuZtaPY4lL00d16UHLvZ9T3QfjKikkWIQM9fHpPb0bfgNLsaxW/xTBbK+H9Fg=="/>
+  </connectionStrings>
+  <system.web>
+    <customErrors mode="Off"></customErrors>
+    <compilation targetFramework="4.6.2" />
+      <authentication mode="None">
+        <!--<forms loginUrl="~/Account/Login.aspx" timeout="2880" />-->
+      </authentication>
+      <sessionState timeout="120"/>
+  </system.web>
+  <system.webServer>
+    <modules runAllManagedModulesForAllRequests="true"/>
+  </system.webServer>
+</configuration>

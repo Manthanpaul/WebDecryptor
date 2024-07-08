@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<configuration>
+  <appSettings>
+    <add key ="Environment" value="DEV"/>
+    <add key="CORPWAASKEY" value="11480_SKEY"/>
+    <add key="CORPWAASIV" value="11480_SIV"/>
+  </appSettings>
+  <connectionStrings>
+    <add name="WebApprovalTestDB2" connectionString="UBP2Vbc6Y8Y7D0k0srvNJceoO7Y77HIjqNwApfii3xgOBotYJm6TLguclwTg2XzxQ/Bwv19TWXiA8a2qzHQaTwrs24ivBxeReAhiJvt2bARVqw7NxvIr+WlpWfKBUNo60T2CSRDyeUxVhkf4IPsPgoN4QTa5aQ7Udn/PvA6Ho4dedaBLaKUXji22UUA15nyjCHcOYHFtjaKjTZ+qt0w+wTGR6bvSK5r8m6SvSBbnl3g=" />
+    </connectionStrings>
+  <startup>
+    <supportedRuntime version="v4.0" sku=".NETFramework,Version=v4.6.1" />
+  </startup>
+</configuration>

@@ -1,0 +1,63 @@
+﻿<?xml version="1.0"?>
+<!--
+  For more information on how to configure your ASP.NET application, please visit
+  http://go.microsoft.com/fwlink/?LinkId=301879
+  -->
+<configuration>
+  <configSections>
+    <!-- For more information on Entity Framework configuration, visit http://go.microsoft.com/fwlink/?LinkID=237468 -->
+    <section name="entityFramework" type="System.Data.Entity.Internal.ConfigFile.EntityFrameworkSection, EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" requirePermission="false"/>
+  </configSections>
+  <connectionStrings>
+    <add name="SalesActivityEntities" connectionString="q/eAxvkF4QYTv2EdFW95geXlOjEPgdgPzOtgRL0BVdxN2/E7P68TW7UWiDWYtHJnNWIrFXJuxrtw7iHyrOEspyKmkE2aRCKvX6y66S9fc7XZ7Jt4fEVjyccTzB4DKg1ZnTzg4ri6LDRIQjAxgKhivezOso4XAbz+4rM7qro4VpynbPfyyKprH94scEiQL4mFEH+EP8BUv7H6ngD/E23J80oHKJAXizMK8izcNUM604lVYsuP4ftBfCYbtVTsI0TrZYEg26+R98kPKrS/ia8AUd53Vh9QxbtPoVcrJtYzYfMMzc2GPDA0KpTtbY1GxUqNia5vKSJsip77HbT/+S/G15+9EExK3uPd/ezJT+ziMIZ13d/R9DV2jrM/Z8xz3K8e7aVlW63SKDTm0uwLSBOhWKpKXxU4GcaTT+DX+XxMPXfRie6qrDWPFXJuX5Eqbv9Z6gs2eWgDCU0VcywUzSoCWNNpGc/EL7vREVM6J8WsaBo/3fRx3vnwgMJFWpXLqfIBR3LW4i0thqCM4ttNnmj3ztYlkTL1eiGlYTHuDp0+WUoS6N79BkKAx3LgFqgTMUDiSU6xxcK7qrd4rnVYPqG89fRPUsw45xYigZNvA/DQwTn7DQSlxViQiZtQuUMYVvNsL4QO5oOtfos7APveTzXB9+9CLOY+N/vMlivq7nBSs6DyDojrkHZ65WY1495sYQpnM4oh6wqh055n1LpaHmqnFHDCdi8h8QgkqxAJEkadN0hFKtpLxoYtV0NBxL+61KDlkbYfjJ+TztbT0lfFirjOQKK0hmWTb9r/f0FZWhp7VOyKACZIBukLhs3MFX/QAvVCmkQ3sbSD9B9jtGMuP1L3Ghw86LtrFJZZ" providerName="System.Data.EntityClient" />
+  </connectionStrings>
+  <appSettings>
+    <add key="Log" value="1"/>
+    <add key="LogFolderPath" value="D:\weblogs\11435_DTNA-Sales-Campaign-Workflow"/>
+    <add key="APPID_SKEY" value="2,7,3,6,9,1,2,4"/>
+    <add key="APPID_SIV" value="2,7,3,6,9,1,2,5"/>
+  </appSettings>
+  <!--
+    For a description of web.config changes for .NET 4.5 see http://go.microsoft.com/fwlink/?LinkId=235367.
+
+    The following attributes can be set on the <httpRuntime> tag.
+      <system.Web>
+        <httpRuntime targetFramework="4.5" />
+      </system.Web>
+  -->
+  <system.web>
+    <compilation targetFramework="4.0"/>
+    <httpRuntime targetFramework="4.0" executionTimeout="10800" maxRequestLength ="2147483647"/>
+    <customErrors mode="Off"/>
+  </system.web>
+  <system.webServer>
+    <handlers>
+      <remove name="ExtensionlessUrlHandler-Integrated-4.0"/>
+      <remove name="OPTIONSVerbHandler"/>
+      <remove name="TRACEVerbHandler"/>
+      <add name="ExtensionlessUrlHandler-Integrated-4.0" path="*." verb="*" type="System.Web.Handlers.TransferRequestHandler" preCondition="integratedMode,runtimeVersionv4.0"/>
+    </handlers>
+  </system.webServer>
+  <runtime>
+    <assemblyBinding xmlns="urn:schemas-microsoft-com:asm.v1">
+      <dependentAssembly>
+        <assemblyIdentity name="Newtonsoft.Json" publicKeyToken="30ad4fe6b2a6aeed" culture="neutral"/>
+        <bindingRedirect oldVersion="0.0.0.0-8.0.0.0" newVersion="8.0.0.0"/>
+      </dependentAssembly>
+      <dependentAssembly>
+        <assemblyIdentity name="WebGrease" publicKeyToken="31bf3856ad364e35" culture="neutral"/>
+        <bindingRedirect oldVersion="0.0.0.0-1.5.2.14234" newVersion="1.5.2.14234"/>
+      </dependentAssembly>
+    </assemblyBinding>
+  </runtime>
+  <entityFramework>
+    <defaultConnectionFactory type="System.Data.Entity.Infrastructure.LocalDbConnectionFactory, EntityFramework">
+      <parameters>
+        <parameter value="v11.0"/>
+      </parameters>
+    </defaultConnectionFactory>
+    <providers>
+      <provider invariantName="System.Data.SqlClient" type="System.Data.Entity.SqlServer.SqlProviderServices, EntityFramework.SqlServer"/>
+    </providers>
+  </entityFramework>
+</configuration>

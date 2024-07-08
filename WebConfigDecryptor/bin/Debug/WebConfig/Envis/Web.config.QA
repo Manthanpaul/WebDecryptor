@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<configuration>
+  <appSettings>
+      <add key="Log" value="1"/>
+      <add key="LogFolderPath" value="D:\Weblogs\Webapplogs\11038-eNvis-Service"/>
+      <add key="EventLogSource" value="ENVIS"/>
+      <add key="ENVIS_SKEY" value="11998_SKEY"/>
+      <add key="ENVIS_SIV" value="11998_SIV"/>
+    <add key="aspnet:UseTaskFriendlySynchronizationContext" value="true"/>
+  </appSettings>
+  <connectionStrings>
+    <add name="DefaultAppdbConnectionString"
+      connectionString="eWTnCEEfe4B94kAESNUevQ3PtuSLg5nF7Kt03+kaSvu7JBLmt5dRLQxZfZq8K5tM9Rs/ITZVB2UUuG+w2+1nN8ZPgY4359t6+2zJRZqiEW8GkSyXIAEcugy3vibceelca0+TYr/uBMNr17ikEJ62qstXtG5w/ZVyoNu6ap4O4zRwrrgl93rPKrueF86ImkSfLQty5kJNPntMH6Dbc93IXtlWKlQZjPqvYThgasVKfMGKzZHeHg6qkwUK4uO/zpApQfv5ykaQaVt2RpLXkpz8HS2OehQ84jYUot2UeBxOTMY="
+      providerName="System.Data.SqlClient"/>
+  </connectionStrings>
+  <system.web>
+    <compilation targetFramework="4.5.2"/>
+    <httpRuntime targetFramework="4.5.2"/>
+  </system.web>
+  <system.serviceModel>
+    <behaviors>
+      <serviceBehaviors>
+        <behavior>
+          <!-- To avoid disclosing metadata information, set the values below to false before deployment -->
+          <serviceMetadata httpGetEnabled="true" httpsGetEnabled="true"/>
+          <!-- To receive exception details in faults for debugging purposes, set the value below to true.  Set to false before deployment to avoid disclosing exception information -->
+          <serviceDebug includeExceptionDetailInFaults="false"/>
+        </behavior>
+      </serviceBehaviors>
+    </behaviors>
+    <serviceHostingEnvironment aspNetCompatibilityEnabled="true" multipleSiteBindingsEnabled="true"/>
+  </system.serviceModel>
+  <system.webServer>
+    <modules runAllManagedModulesForAllRequests="true"/>
+  </system.webServer>
+</configuration>

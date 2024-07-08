@@ -1,0 +1,129 @@
+<?xml version="1.0"?>
+<configuration>
+  <configSections>
+    <!-- For more information on Entity Framework configuration, visit http://go.microsoft.com/fwlink/?LinkID=237468 -->
+    <section name="entityFramework" type="System.Data.Entity.Internal.ConfigFile.EntityFrameworkSection, EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" requirePermission="false" />
+  </configSections>  
+  <appSettings>
+    <add key="aspnet:UseTaskFriendlySynchronizationContext" value="true"/>
+    <add key="ServerInstance" value="Dev"/>
+    <add key="Log" value="1" />
+    <add key="LogFolderPath" value="D:\weblogs\WebAppLogs\PWMS" />
+    <add key="Environment" value="Dev"/>
+    <add key="OLDSCHEMA" value="TESTDB2"/>
+    <add key="SCHEMA" value="TESTDB2"/>
+    <add key="IMSEndPoint" value="https://dtna-mi-dev.us164.corpintra.net:48538/iib-ims-api/v3/ims-generic-service"/>
+    <!--PWMS Email setup-->
+    <add key="fromEmailId" value="PWMS@daimler.com" />
+    <add key="toEmailId" value="christopher.middaugh@daimler.com" />
+    <add key="ccEmailId" value="don.welty@daimler.com;christopher.middaugh@daimler.com" />
+    <add key="subject" value="" />
+    <add key="devEmailTo" value="christopher.middaugh@daimler.com"/>
+    <add key="devCCTo" value="christopher.middaugh@daimler.com"/>
+    <add key="APPID_SKEY" value="1,9,9,8,2,0,0,3" />
+    <add key="APPID_SIV" value="8,6,7,5,3,0,9,9" />
+    <add key="XREFSERVER" value="uidcrossref.us164.corpintra.net:2399"/>
+    <add key="XREFUSERID" value="uid=xrefPWMS,ou=applicationIDs,o=xrefldap,o=dcx.com"/>
+    <add key="XREFPASSWORD" value="fXkT6k6dOG5NW3ff0FlqvdUmvx1MYlbu"/>
+    <add key="XyServer" value="stnaacvdl054" />
+    <add key="XyLogon" value="iAMFw6KF4epc36RJnElAcw==" />
+    <add key="XyPassword" value="ER5D2RL3m8renaX8cid9owwcsE/c1Mu9" />
+    <add key="XyChangeDirectory" value="//pwms/dev/dbchanges" />
+    <add key="AppDir_DataFiles" value="\\corpnas02\contenta" />
+    <add key="PostFile" value="PostPriceWeight" />
+    <add key="XyPostDirectory" value="//pwms/dev/pwupdates" />    
+    <add key="ProductDefinitionTeamEmail" value="christopher.middaugh@daimler.com" />
+  </appSettings>
+  <connectionStrings>
+    <!--DEV-->
+    <add name="PriceWeightEntities" connectionString="BQAd98gRsrQ6wRu96t4DQwVM3pLYDo4EJCIZlMeio/bag/RstZAeTXrq84WjIK8dW2gVsaPPQX635A+TAUgKVYdDYRhZp09BOEIPO/sfzko3t4dFxwza3Ltimcst5K1a0WYF+lPQ3T3TaNHM79kbP7CaNtvSdZ8Hg4hl1Rqbh9TBxevL3Q9W95L+Dvx0tW9TBPCNftmHlinsUCbYbCAPl6Phuu5hyeeCnju5f5Q+pniGsHqPAHoS4IlT9H2rxWYKYhyA+xaxhU1i/VHTO2irirmsZ70g9m7wCvloX3KE7Q/Yfd7FsbOzrAzhzL6T7rfHUlvdqnXzZ/7rFmTSFizlsJi+yADPJD+nWAd6zsEEK1Q0WUwVCR0BDL9CGH2d351QfGgSRM4LpglokHjHmsr6MzZPeDXRrPC3ICLllNWf46cz+3m+pVCTLDRl5adiSLKhHj/URCA3ctl3xjZWahpCrB3RrDXlcgb1FzhEl2QbipzlXBLmPbGcxUzIiCr6Cm/D4T0rzVUe3QTdapirEcn4e9fKucsmB3dTdgVQo2jXg/+UBxYQv1iCWKPUhhijE7Tfosoj518ertIJ5eIgTtOwPIdtiMi0o9LTzKWyRCPLMc7xMHBYndgl/2F7xOzuq0bu+7tnxnioCSgkbaYacqwqQxzDE4DT2ubJwkIXqBUqHOSwS8dtaIlzpWIhI270wUkRTSQqbA+mxR76IRZfo3Qn23vtRldisyYYibflWrF7IGpxkisMFN4oU1Gpr68RFcqqOu72o+idupUMO7YgMT2paSHa/+iSEEsa" providerName="System.Data.EntityClient" />
+    <!--QA-->
+    <!--<add name="PriceWeightEntities" connectionString="BQAd98gRsrQ6wRu96t4DQwVM3pLYDo4EJCIZlMeio/bag/RstZAeTXrq84WjIK8dW2gVsaPPQX635A+TAUgKVYdDYRhZp09BOEIPO/sfzko3t4dFxwza3Ltimcst5K1a0WYF+lPQ3T3TaNHM79kbP7CaNtvSdZ8Hg4hl1Rqbh9TBxevL3Q9W95L+Dvx0tW9TBPCNftmHlinsUCbYbCAPl6Phuu5hyeeCnju5f5Q+pniGsHqPAHoS4IlT9H2rxWYKYhyA+xaxhU1i/VHTO2irirmsZ70g9m7wCvloX3KE7Q/Yfd7FsbOzrAzhzL6T7rfHUlvdqnXzZ/7rFmTSFizlsJi+yADPJD+nWAd6zsEEK1Q0WUwVCR0BDL9CGH2d351QhzEZCOzTuZbcRxpwsbtHh2F8/olgfK9pUEda1Dzthryfm5GzOHWVdIyJ8EhFGTVoMZbPr5Hz7+/stV7ELNQwSoK3Ny0qv4AH+/VpXnEyprbg61xwT47I22JTNKNuk2A1UC+7lp/mU1uLylv0MWJdGXEtZ9a9Rb/17q37AlFmPDRRly0NYJ3JP0EFcOkL0NuclAZ67a78Zmb1EFB/H/hbF2LkryBoxcX+ZKjDWkhKAmg0I711e3+mpeh3k7V2QHfjCgpDdUPEB/Zta5ICuvJTLmDNU7FBvR0HYHeOMivY85LzkyXoQrTb+IYCyAhnYlmOvRYCsMBwff4c/NlirmnuUW8WtW2cP3F0PvCXPKXhmZIaPRdZ1xt17RXs9k/RFx/YbzohO5o1oCVKI+mUW8fqcdc22+W00Ez1" providerName="System.Data.EntityClient" />-->
+    <add name="TDB2Entities" connectionString="BQAd98gRsrQ6wRu96t4DQwVM3pLYDo4EJCIZlMeio/bag/RstZAeTavarMozRzdIYK6MNgjF/u3GGIaLKVCNcBpp1jvaD+SQ0uijGei19UyQTSHRteDzYFYbHgr8G3U21NLRY68fZVSAjFFkSRyPn3dyx1JHtj7i4H4qL0AyCdYOx6HZ1JfgMwBDWxZj+4OWXwI+JykS9pkorKUPuY2sRC2u3ht+g+etgxLNLBcAnSKFrQbWhHIh6EfAQCoJ9iEYp3HBdzc0dnnd2dY1220mZWS6BUlS4cHfwh1dJPbpR4Hb6kzq63z8AxX1zx660TJVOoLEOz1yya667r9Ew4bs+V6R8lwGRcVXX4zpW79xc/Tm2v0XwsQ9eY+pElZRkmyx+KfA/gw4Hbz5xJGyBhT8uWPT0jdPotETjB1fnynB+gJJwPkWW6ZhKeLGydiPe/yilWpMsVV2NnrCOnJfJaNoG4E5buDg/LIw+eOHRzJJdM77HAkS3Buqv4o9zCCOdemfLMuiYJe7+EM1rFseDGT/3AtrpOIz5ApQR/xjkc+4EojHpeB4tIN+4GRUqRpTkbms+oQz23ONEsmU3tnc7LRvmVYhe7Tq2b4ynVoq3r/3d0SfRH+ULy2aClzZK5erYEXV1wnXmwKM/Mk=" providerName="System.Data.EntityClient" />
+  </connectionStrings>
+  <system.web>
+    <customErrors mode="Off"/>
+    <compilation debug="true" targetFramework="4.5.2"/>
+    <httpRuntime targetFramework="4.5.2"/>
+  </system.web>
+  <system.serviceModel>
+    <bindings>
+      <webHttpBinding>
+        <binding maxBufferPoolSize="2147483647" maxReceivedMessageSize="2147483647" maxBufferSize="2147483647" transferMode="Streamed">
+          <readerQuotas maxDepth="2147483647" maxStringContentLength="2147483647" maxArrayLength="2147483647" maxBytesPerRead="2147483647" maxNameTableCharCount="2147483647" />
+        </binding>
+      </webHttpBinding>
+    </bindings>
+    <extensions>
+      <behaviorExtensions>
+        <add name="crossOriginResourceSharingBehavior"
+          type="Daimler.Pricing.PWMS.PWMSService.CORSEnablingBehavior, 
+                Daimler.Pricing.PWMS.PWMSService, Version=1.0.0.0, Culture=neutral" />
+      </behaviorExtensions>
+    </extensions>
+    <services>
+      <service behaviorConfiguration="serviceBehavior" name="Daimler.Pricing.PWMS.PWMSService.PWMSService">
+        <endpoint address="" behaviorConfiguration="web"
+              binding="webHttpBinding"
+          contract="Daimler.Pricing.PWMS.PWMSService.IPWMSService" />
+        <endpoint contract="IMetadataExchange" binding="mexHttpBinding" address="mex" />
+        <host>
+          <baseAddresses>
+            <add baseAddress="http://localhost:8054/PWMSService.svc"/>
+          </baseAddresses>
+        </host>
+      </service>
+    </services>
+    <behaviors>
+      <serviceBehaviors>
+        <behavior name="serviceBehavior">
+          <serviceMetadata httpGetEnabled="false"/>
+          <serviceDebug includeExceptionDetailInFaults="true"/>
+        </behavior>
+      </serviceBehaviors>
+      <endpointBehaviors>
+        <behavior name="web">
+          <webHttp/>
+          <crossOriginResourceSharingBehavior/>
+        </behavior>
+      </endpointBehaviors>
+    </behaviors>
+    <protocolMapping>
+      <add binding="webHttpBinding" scheme="http" />
+    </protocolMapping>
+    <serviceHostingEnvironment aspNetCompatibilityEnabled="true" multipleSiteBindingsEnabled="true"/>
+  </system.serviceModel>
+  <system.webServer>
+    <modules runAllManagedModulesForAllRequests="true">
+      <remove name="ApplicationInsightsWebTracking"/>
+      <add name="ApplicationInsightsWebTracking" type="Microsoft.ApplicationInsights.Web.ApplicationInsightsHttpModule, Microsoft.AI.Web"
+        preCondition="managedHandler"/>
+    </modules>
+  </system.webServer>
+  <system.net>
+    <mailSettings>
+      <smtp deliveryMethod="Network">
+        <network host="mail.freightliner.com" port="25"/>
+      </smtp>
+    </mailSettings>
+  </system.net>
+  <runtime>
+    <assemblyBinding xmlns="urn:schemas-microsoft-com:asm.v1">
+      <dependentAssembly>
+        <assemblyIdentity name="EntityFramework" publicKeyToken="b77a5c561934e089" culture="neutral" />
+        <bindingRedirect oldVersion="0.0.0.0-5.0.0.0" newVersion="5.0.0.0" />
+      </dependentAssembly>
+    </assemblyBinding>
+  </runtime>
+  <entityFramework>
+    <defaultConnectionFactory type="System.Data.Entity.Infrastructure.LocalDbConnectionFactory, EntityFramework">
+      <parameters>
+        <parameter value="mssqllocaldb" />
+      </parameters>
+    </defaultConnectionFactory>
+    <providers>
+      <provider invariantName="System.Data.SqlClient" type="System.Data.Entity.SqlServer.SqlProviderServices, EntityFramework.SqlServer" />
+      <provider invariantName="IBM.Data.DB2" type="IBM.Data.DB2.EntityFramework.DB2ProviderServices, IBM.Data.DB2.EntityFramework, Version=10.5.5.6, Culture=neutral, PublicKeyToken=7c307b91aa13d208" />
+    </providers>
+  </entityFramework>  
+</configuration>

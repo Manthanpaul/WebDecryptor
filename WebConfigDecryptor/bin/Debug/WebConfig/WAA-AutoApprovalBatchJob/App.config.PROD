@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<configuration>
+  <appSettings>
+    <add key ="Environment" value="PROD"/>
+    <add key="CORPWAASKEY" value="11480_SKEY"/>
+    <add key="CORPWAASIV" value="11480_SIV"/>
+  </appSettings>
+  <connectionStrings>
+    <add name="WebApprovalProdDB2" connectionString="UBP2Vbc6Y8YdFeMi/Ch8kaOlmAQ2XlCVL1B/cN1NValS7JlpdOhy1W1GRpGlzmbv8KLS8FdvA1+P/CMYB2j6cUdA3o3VUWv5FqDAhWnr+wWDFUt8+8jpwXlKiGNx2cvzQhtApAYcsPDS+bDEaP7ANVrfqNnykRa3ZiAEIJqtTPKS1F3HuyMX4UgD0J1/cpUMtdUXG26K7tGHl1qOO1wEb9aZQcXsuSCs" />
+  </connectionStrings>
+  <startup>
+    <supportedRuntime version="v4.0" sku=".NETFramework,Version=v4.6.1" />
+  </startup>
+</configuration>

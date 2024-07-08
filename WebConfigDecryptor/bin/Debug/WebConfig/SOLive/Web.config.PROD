@@ -1,0 +1,74 @@
+<?xml version="1.0"?>
+<configuration>
+  <configSections>
+    <section name="entityFramework"
+      type="System.Data.Entity.Internal.ConfigFile.EntityFrameworkSection, EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"
+      requirePermission="false"/>
+    <!-- For more information on Entity Framework configuration, visit http://go.microsoft.com/fwlink/?LinkID=237468 -->
+  </configSections>
+  <connectionStrings>
+    <add name="PipelineQualityReportEntities"
+      connectionString="gnC5JcqV+II3hU6ngxgYnmGd0om8y3G0iYw5/wZm4wT7F9qxbOxUiVtCZ7QyCzwmXctODfkuJI5jEPrFz8BhMjKxB8yCIXjVzzOL9aB6c53p10K1Go21l4M/0LVQJPMMIRFbDYoOAGMYqICg5cE5v5Lirvg0lR7DMMs2Cr1yoFa6In486UOf7mu6cZaWMybCmpcKv+EV9jn7r8KiP41Qv7TZYa5i2vIYVGGrt+pR961j4BqqWD1w42A+Gtw0dImYJndxbKI8FGtf+OpnVn0HX7wIPoG7lJhY+Yr5ABCycCin5MLDffnIQJLoWgpMhqOvRz8LQ2QTXMA+kKFZSwQWm3fk5TMkihl8oP9gPJYAtduY1gUWBX8dPggBY7VDoK9Bqfh5xIMNBIVL84vobWKd304/AG6cigJMldC2W0B4OO5hw6XKB80yL6pKGq8VK510mHWPyNWp1q2pkxq/mOevVBDGZKxen4f5M8J15Q8QXXWYSTCM1g/iloMjskds10SAAtURNMx9J1qIhZDIGWeMebnI29gwmVoS9aYBc6EzZGY69EdnL1NBxDRvaQhrpOmiNDWqNmEvLm5Y3qIA/W+D4IvZw39cS54/ZDWT+Z6cTzO5PBXn/URb1QcEmPSD8i3fbIG7pIo8c+Y+Ne+IsdZYc3urTDMU4++/e+UQ/DbGt1Qgls5f9a0dlI/2oRroVOlquvB4rjg31UZZXzkJmCbFfVVpFaVU2Gn+tA/2viVokHgEqeTt08SxoUtpq8yrmyVMQMsT7rH8qa+T3rCnE65D6183OTBz9F5d"
+      providerName="System.Data.EntityClient"/>
+    <add name="PipelineQualityReportConnString"
+      connectionString="UyedT6ifKHt73UNvB/9QBsp7L/x2pDPs47R3lcqgG3s/HE0w83EZYVMhM/Q2OxycvzLm7SGl1WVoUeM4CV5aquX+ACqPoeWWBImFDv476zyaenT0AqQh7bJUpk0OFgbIfxKNSiN37szMEaxo4qpa+qvZFZ3ybRbXuwfiA6ZMki2RO/XqjJ3jzzKXP5BQOfULTy1S2zcDosh71y9VF1hxCw=="
+      providerName="System.Data.SqlClient"/>
+    <add name="DB2Connection"
+      connectionString="UyedT6ifKHtWS+84ApYaK6P6AIVC5hfzT00p1b22+nmB5zV1kATe0HBCt4lBDzYerpDEkGEpp48UuCrN707bmd0pJmr6uV4auxsCphSyUj9wY98I7PLdSROJBcHMzv6a1gDrPXRN0zxWgTo1mBs6MNmM8ycxx8PE9Q9ity4/5FqZ1a4ECOZSSN+3SxFFQp7iNMeOHe4RlBvIQ6q7Qe+KLsIgFsuwJ/sk0kk2xiAVqSO7XHqXNUN0ZA=="/>
+    <add name="SOLiveSummary"
+      connectionString="UyedT6ifKHt73UNvB/9QBsp7L/x2pDPs47R3lcqgG3s/HE0w83EZYVMhM/Q2OxycvzLm7SGl1WVoUeM4CV5aquX+ACqPoeWWBImFDv476zyorTmB0nYacopqMQuyzV17RntU1wKspa9vOGcdzQT6lDr2iSnIMqBZyYxk51LYpHcYSSmGibWGuF3NWKDeSevVdTigWYqqSfg/LK1SzPuWjY+GWGMbGXAsKsDk8fSJPyhqsEbej/2tVxm52V7zISz+XBXz6IbVHrQ="
+      providerName="System.Data.SqlClient"/>
+  </connectionStrings>
+  <appSettings>
+    <add key="Log" value="1"/>
+    <add key="LogFolderPath" value="D:\Weblogs\Webapplogs\10342-PipelineQualityReportService"/>
+    <add key="PQRSKEY" value="27247_SKEY"/>
+    <add key="PQRSIV" value="27247_SIV"/>
+    <add key="aspnet:UseTaskFriendlySynchronizationContext" value="true"/>
+  </appSettings>
+  
+  <system.web>
+    <compilation targetFramework="4.6.2">
+      <assemblies>
+        <add assembly="System.Data.Entity, Version=4.0.0.0, Culture=neutral, PublicKeyToken=B77A5C561934E089"/>
+        <add assembly="System.Data.Services, Version=4.0.0.0, Culture=neutral, PublicKeyToken=B77A5C561934E089"/>
+        <add assembly="System.Data.Services.Client, Version=4.0.0.0, Culture=neutral, PublicKeyToken=B77A5C561934E089"/>
+      </assemblies>
+    </compilation>
+    <httpRuntime targetFramework="4.6.2"/>
+    <pages controlRenderingCompatibilityVersion="4.0"/>
+  </system.web>
+  <system.serviceModel>
+    <behaviors>
+      <endpointBehaviors>
+        <behavior name="debuggingBehaviour">
+          <dataContractSerializer maxItemsInObjectGraph="2147483647"/>
+        </behavior>
+      </endpointBehaviors>
+      <serviceBehaviors>
+        <behavior>
+          <dataContractSerializer maxItemsInObjectGraph="2147483646"/>
+          <serviceMetadata httpGetEnabled="true"/>
+          <serviceDebug includeExceptionDetailInFaults="false"/>
+        </behavior>
+      </serviceBehaviors>
+    </behaviors>
+    <serviceHostingEnvironment multipleSiteBindingsEnabled="true" aspNetCompatibilityEnabled="false"/>
+  </system.serviceModel>
+  <system.webServer>
+    <modules runAllManagedModulesForAllRequests="true"/>
+  </system.webServer>
+  <system.net>
+    <mailSettings>
+      <smtp deliveryMethod="Network">
+        <network host="mail.us164.corpintra.net" port="25"/>
+      </smtp>
+    </mailSettings>
+  </system.net>
+  <entityFramework>
+    <defaultConnectionFactory type="System.Data.Entity.Infrastructure.SqlConnectionFactory, EntityFramework"/>
+    <providers>
+      <provider invariantName="System.Data.SqlClient" type="System.Data.Entity.SqlServer.SqlProviderServices, EntityFramework.SqlServer"/>
+    </providers>
+  </entityFramework>
+</configuration>

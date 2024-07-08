@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<configuration>
+  <configSections>
+    <section name="entityFramework"
+      type="System.Data.Entity.Internal.ConfigFile.EntityFrameworkSection, EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"
+      requirePermission="false"/>    
+  
+  <!-- For more information on Entity Framework configuration, visit http://go.microsoft.com/fwlink/?LinkID=237468 --></configSections>
+  <connectionStrings>
+    <add name="SOMSEntities"
+      connectionString="rw31+l3/gr3PYuZ6p6Yqqg/R5kDTusCcVyqL8bjYtaAAAgO5cGOI3F0lII2y0xym6fIBj5EadH/0yUMku6VRDpGGmz3OmToWABlhny+8+5MQPqLGVnir5H3KnbzOF7p0kt3kZpMXXdmbUexWiFomAXshveao01/c/jUsmtUv1amrInlCeX46yXioWyLwQ4+j/JdeywPK3aAAaz7AyZGqitWqpedHGF3PJvEaEiRFcaW64Tgb2QYXA8L1DGl2S5mN/oVufSYfSkdaHd4AVXHrUmhRJJfsK2JJAsrqFOoitT/pdM9T7q8R9XSc4E+xDRaIRg35sDeZVsJaSLx1XpulV0L0//QBvZTDnne1xjKY6Dp/T4bPHOxvBkFf19bdJzW66LgalakFUmpvxbMHT5pwRGjFb0X+JghrCXk4GqOgV2WImexGei6JhpsZyUipGslKlHvp4XY/C2vqgVYX/ScYcEDzv7xFpxJtbI9exRNKnJOGB1+NdTnzpca1GGBPDAiTIAgL93TvqKpVBPglqT2N9zhMlNaipWTJbtouGIuU6fTDLNQzyqSkQoi5XTILO5ObCYrpRBlCEeEjikNzRqmZ75larODUUnyFxKU2PDKOf31s5mcZM6sQQdaXLgfFvkbbQbp+ar7jKzTQ+aPoXH4egAdh9DiiF6f826GF4C795GgJFOhJ7ghIsJslY0YF9zF/GSqYNRnFI74A3bafHrOuOdRcN7qtHlq+gYm7nHF/ijbHU524zhHEWpEkLnov84zlFl8OmGqisP2Xe//xKaBVGA5m3PUys6nuvIKlWigjAoJdB3joBTsOT9jRVa3r1ggEB8NmQ3Sb9BXB/ly/X84MkEZKc0sXoJxvR+Lo1HIW64pV4ODyRhBxq0ffuCfrS4xtYME6LJRCwrI="
+      providerName="System.Data.EntityClient"/>
+    <add name="TDB2DataEntities"
+      connectionString="rw31+l3/gr3PYuZ6p6Yqqg/R5kDTusCcVyqL8bjYtaAAAgO5cGOI3FBCd56Mx50oicj+GFO83NWqICDuW0bHADLg1uRF5Kwb6ZV+uh3QY6+4ePzcev7H0A1q4g9Hr4y0fLfy0wCnrTs+1h9U9qj7R0s7oPY/NI9NDTiKVjwGErIihQfoTlzYk2yxsbuoKlbiBkHwo1m/t3OxEXFzjssQ/pBG/P92Hk7UT9Dpzk/AIm61/iSXReA6eZlKr781u1+M0+405ZE9h0VZFuwG66xGv8Hx4CQ0SLKNLXSXIQM0jxicGTh4kXpT6Jtc6h922mrn/FXaYyHsi8xrg55v5ULvdXb1wK8nCd5j9QMDD1PWDOkgvVDIyz6xAFMQqu4AIQZgJA/BhG5+pG5bTYcSiBQeCVPruo9U2f9Cm6d+sP5E7ubtadYO9QuxOvz5fsKDbbu1yqbvKHEEr/EN1rMVN7LEmsAQmyiUD2z9jtzsEpj6kIqDcnmWFVZ6cc/PRgn4S+CmGt4L+ko1ZCzSX5Ef8IH2Sc6pE31U0GYHwIZ0kdqG8kpnDq1QsdooUHY+w5d9XEZpI6s9a/nbINGtVNBz7dxycR14YKm68Rh+MKVigM+eUwjKr2XBXKH2BV32VNu6EviU1JJwDS9X1p4rcQKnk2maDRoNYPQp1XBYwcZmRdWAh1E6h734M05hcq/djM4eS8MR1dW0KZ4yPfyJyt8L2ahb6w=="
+      providerName="System.Data.EntityClient"/>
+  </connectionStrings>
+  <appSettings>
+    <add key="BranchName" value="QA"/>
+    <add key="Log" value="1"/>
+    <add key="LogFolderPath" value="D:\Weblogs\Webapplogs\InternalTCOCorporateServices"/>
+    <add key="Defaultschema" value="TESTDB2"/>
+    <!--IMSService Settings Start-->
+    <add key="Host" value="ftlsysb.freightliner.com"/>
+    <add key="Port" value="32000"/>
+    <add key="Destination" value="TIMS"/>
+    <add key="UserName" value="APP0090"/>
+    <add key="Password" value="6MvDxznCPEce566hxQLuqWQRnbE+Auz7"/>
+    <!--IMSService Settings End-->
+    <add key="ITCOCAESKEY" value="21518_SKEY"/>
+    <add key="ITCOCAESIV" value="21518_SIV"/>
+  </appSettings>
+  <!-- For a description of web.config changes see http://go.microsoft.com/fwlink/?LinkId=235367. -->
+  <system.web>
+    <compilation targetFramework="4.6.2">
+      <assemblies>
+        <add assembly="System.Data.Entity, Version=4.0.0.0, Culture=neutral, PublicKeyToken=B77A5C561934E089"/>
+        <add assembly="System.Data.Services, Version=4.0.0.0, Culture=neutral, PublicKeyToken=B77A5C561934E089"/>
+        <add assembly="System.Data.Services.Client, Version=4.0.0.0, Culture=neutral, PublicKeyToken=B77A5C561934E089"/>
+      </assemblies>
+    </compilation>
+    <httpRuntime targetFramework="4.6.2"/>
+    <pages controlRenderingCompatibilityVersion="4.0"/>
+  </system.web>
+  <system.serviceModel>
+    <behaviors>
+      <endpointBehaviors>
+        <behavior name="debuggingBehaviour">
+          <dataContractSerializer maxItemsInObjectGraph="2147483647"/>
+        </behavior>
+      </endpointBehaviors>
+      <serviceBehaviors>
+        <behavior>
+          <dataContractSerializer maxItemsInObjectGraph="2147483646"/>
+          <serviceMetadata httpGetEnabled="true"/>
+          <serviceDebug includeExceptionDetailInFaults="false"/>
+        </behavior>
+      </serviceBehaviors>
+    </behaviors>
+    <serviceHostingEnvironment multipleSiteBindingsEnabled="true" aspNetCompatibilityEnabled="false"/>
+  </system.serviceModel>
+  <system.webServer>
+    <modules runAllManagedModulesForAllRequests="true"/>
+  </system.webServer>
+  <system.net>
+    <mailSettings>
+      <smtp deliveryMethod="Network">
+        <network host="relay2t.us164.corpintra.net" port="25"/>
+      </smtp>
+    </mailSettings>
+  </system.net>
+  <entityFramework>
+    <defaultConnectionFactory type="System.Data.Entity.Infrastructure.SqlConnectionFactory, EntityFramework"/>
+    <providers>
+      <provider invariantName="IBM.Data.DB2"
+        type="IBM.Data.DB2.EntityFramework.DB2ProviderServices, IBM.Data.DB2.EntityFramework, Version=10.5.5.6, Culture=neutral, PublicKeyToken=7c307b91aa13d208"/>
+      <provider invariantName="System.Data.SqlClient" type="System.Data.Entity.SqlServer.SqlProviderServices, EntityFramework.SqlServer"/>
+    </providers>
+  </entityFramework>
+</configuration>

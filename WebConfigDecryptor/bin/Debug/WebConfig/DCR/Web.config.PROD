@@ -1,0 +1,46 @@
+﻿<?xml version="1.0"?>
+<configuration>
+  <configSections>
+    <!-- For more information on Entity Framework configuration, visit http://go.microsoft.com/fwlink/?LinkID=237468 -->
+    <section name="entityFramework"
+      type="System.Data.Entity.Internal.ConfigFile.EntityFrameworkSection, EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"
+      requirePermission="false"/>
+  </configSections>  
+  <connectionStrings>
+    <add name="DataCodeRequestEntities" connectionString="BdTgaJy7q7cdWvFSD+vYaR+OO2UTKjEReLdKpgCU1OxlWEmgkFCOiXyfuJxRmDe9Xj3MrN2TpOddrFI0czsqeR6wFxwKg9K/KW52fgOJmZ7dSGYfniRdYcIFYWfrrSlku8myZja7dS2DI0QH6XI1TWWPvLNVi2Hf3M5u1i9bq68OWM9C+/+aFDCMUjzRB8BDG8B6+xWPnOY7+8TZaySivgNMFGQCkWFkFFW5Znf12ONtZ4kdZGoBOlVH3Wzp4Tderr6rvDT/UKS8PjA6hEiViR4Qwe3C8325NJvwLRya9fF8azakBt4HPmxgN6OZG4jGdGNvcRMRdM0vYmlYWQJYHzwHOHKUbPtqjiDB9lCemLchwwItICL+2itQtjqVlm85oTTPBg+yu3gD9njdpERQ2jA1uRuE/bXdcWGUFVc/rB7sPS/lZB7TEh2yiMORrOMs6ksHyfDMmMiuqukiHvNnLpLtEqbntOY8I4m1VpXd9DWXoEaxOCP2Y0lKqovLFvffhl1RBllPv0zxaLHUf6/pXqqVpHGQqxOq84GrbBVSz1/tGF+nxeLX8oWk7dJkiR+F2BumRAUaeiV2KToZXn2PgDeryIoQksh6Jy5xrU0rjeVDAyh0IV7E5pUKmQ8G1FqirT9DHu53BRq2OFOMfPvE+PIy5/HxZLR8dBvdGijEn7539UBYLy9/jwhUmDYx1auj9CQ1EQAx37+eMQp2U/G2hUgPAeQahoBquF5g5nI9t+lZRAyelfrBm/tqS3DDaLMGd4lk1kjRqez1p9UhBTZctMqYypvZrGaFENpg8FzISPEzCHcNRHMV8EI9zMqv9DrTca+7XdaENiiTFYZ7BAywWA==" providerName="System.Data.EntityClient" />
+    <add name="DataCodeRequestConnection" connectionString="yo/Z4YJcaMXC9Wo2eguHoI2IinrKnsdAax87j+sfWXx6o4ajZRtMdrfszI7PN8IMnYfTyqIEAwoxr4EDEYEloe6OmogTkHtv55fCUUICi59p+jUz0yF91zlFtXHHcvabF9Qj0RnqWqyQ7E34mFyJbraXMzJcBd4NVdR3vZnpvkaI9sFlTTpZLRjVPGRLxAU1NOaQl/igDgh1qmCSJhLYupxlXWP117TKGK5axPX/8z9Ew8BiaXLiCUbeGDPboLsHQ+M3BeSgXV8N4i9+LXAY5KIeBI6MGrtA4DdL4T26zTx9HZp1i8usFfRJbFNG2MrtEC5QE4M8p3SvY6GyeTarzRQTAeba8hgaIb7ZLk3fR3gQ62sDkmVH2dkdkQ54NI/nSTYkFPqwPqNQ59INh/wVLVo96GNFbI0dTcg1bNri4UU=" />
+  </connectionStrings>
+  <appSettings>
+    <add key="ConnectionSchema" value="PRODDB2"/>
+    <add key="DataCodeRequestConnectionString" value="yo/Z4YJcaMXC9Wo2eguHoI2IinrKnsdAax87j+sfWXx6o4ajZRtMdrfszI7PN8IMnYfTyqIEAwoxr4EDEYEloe6OmogTkHtv55fCUUICi59p+jUz0yF91zlFtXHHcvabF9Qj0RnqWqyQ7E34mFyJbraXMzJcBd4NVdR3vZnpvkaI9sFlTTpZLRjVPGRLxAU1NOaQl/igDgh1qmCSJhLYupxlXWP117TKGK5axPX/8z+oSl6gLJTIVw=="/>
+    <add key="LogFolderPath" value="D:\Weblogs\Webapplogs\SMF-1138\DCR"/>
+    <add key="Log" value="1"/>
+    <add key="APPID_SKEY" value="1,1,4,6,7,1,2,4"/>
+    <add key="APPID_SIV" value="1,1,4,6,7,1,2,5"/>
+  </appSettings>
+
+  <system.web>
+    <compilation debug="true" targetFramework="4.0" >
+      <assemblies>
+        <add assembly="System.Data.Entity, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+      </assemblies>
+    </compilation>
+    <httpRuntime executionTimeout="3600" maxRequestLength ="2147483647"/>
+  </system.web>
+  <system.serviceModel>
+    <behaviors>
+      <serviceBehaviors>
+        <behavior>
+          <!-- To avoid disclosing metadata information, set the value below to false and remove the metadata endpoint above before deployment -->
+          <serviceMetadata httpGetEnabled="true"/>
+          <!-- To receive exception details in faults for debugging purposes, set the value below to true.  Set to false before deployment to avoid disclosing exception information -->
+          <serviceDebug includeExceptionDetailInFaults="false"/>
+        </behavior>
+      </serviceBehaviors>
+    </behaviors>
+    <serviceHostingEnvironment multipleSiteBindingsEnabled="true" />
+  </system.serviceModel>
+  <system.webServer>
+    <modules runAllManagedModulesForAllRequests="true"/>
+  </system.webServer>
+</configuration>

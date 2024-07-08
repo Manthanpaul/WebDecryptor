@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<configuration>
+  <connectionStrings>
+    <add name="SinglePointOfEntryEntities" connectionString="fdinZ2vr//ufpyvPGI8adARyBd0Ft0wnEhbElCBELTeZbNPE0r7Di8YEWaXV8O67JSSQOHDHo10jzISn45y7MucVcTrqTEMTcyKYp3PtpnBOVVo7EL1rLme9+0Q78zIIn3egi3tr5ur1F3u2sEr8Tk0moQaaavQHtBoqcTKjs6HUp+bgVFFrp7EVGqTlbAj+tOx5bZaKaJh8T5JwOia31kH2rOYLs7C6KmCQLL0kyVup79KglUCjpOt/bFvJlXZ8ALs4zByc6Jz6nM/O775hCOL8xcpQ2j0qsoros54eLERzdaV40SFDLLocFByNtpJFdul0jjS7ihIY2pjLg6MOOHv6Ug/UDEmLDHlqI9h2kZ/BA2g0LL+GHDBuaL4jM1SzizoQzIIEjxxTL5vlsEkg1pgewou26SOFATEkOoScqnM7R5TdzhzWo175GdNry6QDX6U8ev3XiU6h8/Ce7WOx+wjfh1Uh3A5tcFkBGbCu3WicDgfCTOrWSgjrgpx3tR9jrN4Hi6WGdzV1JBJxxWCUGHaF8/ABzhv/Mr3qS7eVZ3ATUWf/F0iV36PQFTo50Li/2t2Ax8t3PqLto9p0nuJ2aq5OrRTvCLvU9TQ/tb1TN4jSw292sYcMPTt34aWRs5zOtjRf+UmQVltjdnyDA/dJtGyThIbB9hTdk5UwxDzMQ80M+hca+B9cCnZqsL5hCAxXbFILx7wR3QaopRFNfT4LCJScb4PEGxxPvq4x60vGMffbx9+4Jev1cRNoDakIMjcAfreXGqBScx0RULCA2EXf3RiDF3wgk+B7vglWMh7diCqD6rB9TqAsxkWsxAeFVne6yUS23f7SCyPPw8jv11Lg5VolyCRiwMvK8zUcGLkXUTkzCHvUGuF+Kg==" providerName="System.Data.EntityClient" />
+    <add name="SinglePointOfEntryConnection" connectionString="1DiTW26I/hUq6ZzPIeRbKCjdjOMofmgU3Bh/XC/AC8ZXo6ymDP2ZxqcUWWxogT6gvvNGFdF6NqTt4L7J2dvRrG1YvKXg44Lj3BWk/f9I+6wxHAgd/wpavxPpOkoPJLje9N9kly7K4tk+xGrxKzwevs9j/TXJlG2fcFf+27x7Js6/zP+/XbSu/uMuFEB7GySNIitKfpHkJuG46RyXgOLMUWoWSf0s1Lpa0Mxxhl8ZG6qNksfOsIKLCJmls19Q2EonXPt5mBYFRNuK6Gjo0TJj32UxGfJH00POhf3IHdq94yWWvLiIZFhr6YrjD1rToZhjsFMNZPD7lYudL1ga1W7gJpWg5liW/CgjeZ3Xf4iy83EZJ/UdbQ/8MxFcduhLkGTwa8izXmmZx4Gx6Tix37i2/u20q7Ez6f55UEgB7JBiluXjS//ffndUVFmcx3JyIQds036BtJFgiHI8DxF1vp5UjK2WRCqLbPD1UMssnI+vNec0nKaD0TbO/Q==" />
+  </connectionStrings>
+  <appSettings>
+    <add key="ConnectionSchema" value="TESTDB2"/>
+    <add key="Log" value="1"/>
+    <add key="LogFolderPath" value="D:\Weblogs\Webapplogs\SMF-1138\SinglePointofEntry"/>
+    <add key="RowCount" value="1000"/>
+    <add key="APPID_SKEY" value="1,1,4,6,5,1,2,4"/>
+    <add key="APPID_SIV" value="1,1,4,6,5,1,2,5"/>
+  </appSettings>
+  <system.web>
+    <customErrors mode="Off"/>
+    <compilation debug="false" targetFramework="4.0">
+      <assemblies>
+        <add assembly="System.Data.Entity, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+      </assemblies>
+    </compilation>
+    <httpRuntime executionTimeout="10800" maxRequestLength="2147483647" />
+    <sessionState cookieless="false" regenerateExpiredSessionId="true" timeout="20" />
+  </system.web>
+  <system.serviceModel>
+    <behaviors>
+      <serviceBehaviors>
+        <behavior name="">
+          <serviceMetadata httpGetEnabled="true" />
+          <serviceDebug includeExceptionDetailInFaults="false" />
+          <dataContractSerializer maxItemsInObjectGraph="2147483646" />
+        </behavior>
+      </serviceBehaviors>
+    </behaviors>
+    <serviceHostingEnvironment multipleSiteBindingsEnabled="true" />
+    <bindings>
+      <wsHttpBinding>
+        <binding name="WsHttpBinding" closeTimeout="01:40:00" openTimeout="01:40:00"
+            receiveTimeout="01:40:00" sendTimeout="01:40:00" bypassProxyOnLocal="false"
+            transactionFlow="false" hostNameComparisonMode="StrongWildcard"
+            maxBufferPoolSize="2147483647"  maxReceivedMessageSize="2147483647"
+            messageEncoding="Text" textEncoding="utf-8" useDefaultWebProxy="true"
+            allowCookies="false">
+          <readerQuotas maxDepth="2147483647" maxStringContentLength="2147483647" maxArrayLength="2147483647"
+              maxBytesPerRead="2147483647" maxNameTableCharCount="2147483647" />
+          <reliableSession ordered="true" inactivityTimeout="00:40:00"
+              enabled="false" />
+          <security mode="Message">
+            <transport clientCredentialType="Windows" proxyCredentialType="None" realm="" />
+            <message clientCredentialType="Windows" negotiateServiceCredential="true" algorithmSuite="Default" />
+          </security>
+        </binding>
+      </wsHttpBinding>
+    </bindings>
+    <client>
+      <endpoint address="http://localhost:40099/DataServices/IMSService.svc/soap" binding="wsHttpBinding" bindingConfiguration="WsHttpBinding" contract="IMSService.IIMSService" name="WsHttpBinding">
+        <identity>
+          <servicePrincipalName value="host/localhost" />
+        </identity>
+      </endpoint>
+    </client>
+  </system.serviceModel>
+  <system.webServer>
+    <modules runAllManagedModulesForAllRequests="true" />
+  </system.webServer>
+</configuration>

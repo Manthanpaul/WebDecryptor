@@ -1,0 +1,194 @@
+<?xml version="1.0"?>
+<configuration>
+
+  <connectionStrings>
+    <!-- Start Ticket#107215 Security Remediation -->
+    <!-- End Ticket#107215 Security Remediation -->
+    <add name="WebApprovalProdDB2"
+      connectionString="ek870mo8movYfnyzS3Qx37ojbhuDAJ4+MQjhyDL5njvmQ5O+BaFR6x32/sorXwsU/HpSmR1HmOWXTHmEHDpX5fDn4Gi1T1TRhT3i/VxQORCFWBTZGA2GxkrWgbeHwKjFxZ/jh0OUJqWMpvI0T/6Az4EJIRV5+5fXFvmv/zN6ok9ZNB3cAkLJ35sY0v6BXnlHQ9i4Ayl+cPeMizSrpc/TeP+2udcL2K9NrsFErHgY83i4ORk/gi2FUNIpas6J/GUGqU92WKjflFNV62TOw4wHJpynUgjzZZ1el8xcCiv9xbACcD1QG4AbFOT5YMTKTNjsPT+tKwnsPYSuZOcX+DKfL1M3AMuG4YLAafmV4ubvxLv/PpQdxtYze4o+CiUThzefNNa2T/nO/UXfWjOB8/Jxmw=="/>
+  </connectionStrings>
+
+  <system.net>
+    <mailSettings>
+      <smtp deliveryMethod="Network">
+        <network host="relay2t.us164.corpintra.net" port="25"/>
+      </smtp>
+    </mailSettings>
+  </system.net>
+
+  <appSettings>
+
+    <add key="Log" value="1"/>
+    <add key="LogFolderPath" value="D:\Weblogs\Webapplogs\WebApproval\Supplier"/>
+    <add key="EventLogSource" value="WebApproval"/>
+    <add key="logOnOff" value="off"/>
+    <add key="LogLevel" value="Normal"/>
+    <add key="BypassSiteminder" value="0"/>
+    <add key="TestUserId" value="SUPPLIER-ROK-2"/>
+    <add key="HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Freightliner\SMTPServer" value="relay2t.us164.corpintra.net"/>
+    <add key="HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Freightliner\SMTPServerPort" value="25"/>
+    <add key="Host" value="ftlsysc.freightliner.com"/>
+    <add key="Port" value="32100"/>
+    <add key="Destination" value="IMS"/>
+    <add key="UserName" value="PCFT0090"/>
+    <add key="Password" value="IilFf+V6x65PXWLwG7ii2wivJ8NEcWmx"/>
+    <add key="SUPWAASKEY" value="11480_SKEY"/>
+    <add key="SUPWAASIV" value="11480_SIV"/>
+ 
+    <!-- Dev -->
+    <add key="HKEY_LOCAL_MACHINE\SOFTWARE\Freightliner\WebApproval\Test\Active" value="NO"/>
+    <add key="HKEY_LOCAL_MACHINE\SOFTWARE\Freightliner\WebApproval\Test\AuditLog" value="1"/>
+    <add key="HKEY_LOCAL_MACHINE\SOFTWARE\Freightliner\WebApproval\Test\AuditLogFile" value="WebApproval.log"/>
+    <add key="HKEY_LOCAL_MACHINE\SOFTWARE\Freightliner\WebApproval\Test\AuditLogPath" value="D:\\weblogs\\WebAppLogs\\"/>
+    <add key="HKEY_LOCAL_MACHINE\SOFTWARE\Freightliner\WebApproval\Test\DB2ConnectionString"
+      value="File Name=D:\\Inetpubftl\\wwwroot\\webapps\\WebApproval\\scripts\\WebApprovalTestDB2.udl"/>
+    <!-- Changed corpdomain value for Ticket # 86692-->
+    <add key="HKEY_LOCAL_MACHINE\SOFTWARE\Freightliner\WebApproval\Test\MailRecipients" value="SCS-CAE-App-Support@daimler.com"/>
+    <add key="HKEY_LOCAL_MACHINE\SOFTWARE\Freightliner\WebApproval\Test\Prod" value="0"/>
+    <!-- Changed corpdomain & SupplierDomain value for Ticket # 86692-->
+    <add key="HKEY_LOCAL_MACHINE\SOFTWARE\Freightliner\WebApproval\Test\CorpDomain" value="https://waa-dtna-dev.app.corpintra.net/corporate/ "/>
+    <add key="HKEY_LOCAL_MACHINE\SOFTWARE\Freightliner\WebApproval\Test\SupplierDomain"
+      value="https://secure.dev.freightliner.com/supplierapproval_v2/supplier/"/>
+    <add key="HKEY_LOCAL_MACHINE\SOFTWARE\Freightliner\WebApproval\Test\XrefPwd" value=""/>
+    <add key="HKEY_LOCAL_MACHINE\SOFTWARE\Freightliner\WebApproval\Test\XrefServerName" value="uidcrossref.us164.corpintra.net:2399"/>
+    <add key="HKEY_LOCAL_MACHINE\SOFTWARE\Freightliner\WebApproval\Test\XrefUserId" value="uid=xrefDataCodeReq,ou=applicationIDs,o=xrefldap,o=dcx.com"/>
+    <add key="HKEY_LOCAL_MACHINE\SOFTWARE\Freightliner\WebApproval\Test\IMSServiceAddress"
+      value="http://localhost:40099/DataService/IMSService.svc/rest/ExecuteTransaction"/>
+    <add key="DevPostURL" value="https://dtna-xservices1-dev.dev.freightliner.com:8443/soms/websupplierapproval"/>
+    
+    <!-- QA -->
+    <add key="HKEY_LOCAL_MACHINE\SOFTWARE\Freightliner\WebApproval\QA\Active" value="NO"/>
+    <add key="HKEY_LOCAL_MACHINE\SOFTWARE\Freightliner\WebApproval\QA\AuditLog" value="1"/>
+    <add key="HKEY_LOCAL_MACHINE\SOFTWARE\Freightliner\WebApproval\QA\AuditLogFile" value="WebApproval.log"/>
+    <add key="HKEY_LOCAL_MACHINE\SOFTWARE\Freightliner\WebApproval\QA\AuditLogPath" value="D:\\weblogs\\WebAppLogs\\"/>
+    <add key="HKEY_LOCAL_MACHINE\SOFTWARE\Freightliner\WebApproval\QA\DB2ConnectionString"
+      value="File Name=D:\\Inetpubftl\\wwwroot\\webapps\\WebApproval\\scripts\\WebApprovalTestDB2.udl"/>
+    <!-- Changed corpdomain value for Ticket # 86692-->
+    <add key="HKEY_LOCAL_MACHINE\SOFTWARE\Freightliner\WebApproval\QA\CorpDomain" value="https://waa-dtna-test.app.corpintra.net/corporate/"/>
+    <add key="HKEY_LOCAL_MACHINE\SOFTWARE\Freightliner\WebApproval\QA\MailRecipients" value=""/>
+    <add key="HKEY_LOCAL_MACHINE\SOFTWARE\Freightliner\WebApproval\QA\Prod" value="0"/>
+    <!-- Changed corpdomain & SupplierDomain value for Ticket # 86692-->
+    <add key="HKEY_LOCAL_MACHINE\SOFTWARE\Freightliner\WebApproval\Test\CorpDomain" value="https://waa-dtna-test.app.corpintra.net/corporate/"/>
+    <add key="HKEY_LOCAL_MACHINE\SOFTWARE\Freightliner\WebApproval\QA\SupplierDomain" value="https://securestage.freightliner.com/supplierapproval/supplier/"/>
+    <add key="QAPostURL" value="https://dtna-xservices1-test.qa.freightliner.com:8443/soms/websupplierapproval"/>
+
+    <!-- Prod -->   
+
+    <add key="HKEY_LOCAL_MACHINE\SOFTWARE\Freightliner\WebApproval\Production\Active" value="YES"/>
+    <add key="HKEY_LOCAL_MACHINE\SOFTWARE\Freightliner\WebApproval\Production\AuditLog" value="1"/>
+    <add key="HKEY_LOCAL_MACHINE\SOFTWARE\Freightliner\WebApproval\Production\AuditLogFile" value="WebApproval.log"/>
+    <add key="HKEY_LOCAL_MACHINE\SOFTWARE\Freightliner\WebApproval\Production\AuditLogPath" value="D:\\weblogs\\WebAppLogs\\"/>
+    <add key="HKEY_LOCAL_MACHINE\SOFTWARE\Freightliner\WebApproval\Production\DB2ConnectionString"
+      value="File Name=D:\\Inetpubftl\\wwwroot\\webapps\\WebApproval\\scripts\\WebApprovalProdDB2.udl"/>
+    <!-- Changed corpdomain value for Ticket # 86692-->
+    <add key="HKEY_LOCAL_MACHINE\SOFTWARE\Freightliner\WebApproval\Production\CorpDomain" value="https://waa-dtna.app.corpintra.net/corporate/"/>
+    <add key="HKEY_LOCAL_MACHINE\SOFTWARE\Freightliner\WebApproval\Production\MailRecipients" value=""/>
+    <add key="HKEY_LOCAL_MACHINE\SOFTWARE\Freightliner\WebApproval\Production\Prod" value="1"/>
+    <!-- Changed corpdomain & SupplierDomain value for Ticket # 86692-->
+    <add key="HKEY_LOCAL_MACHINE\SOFTWARE\Freightliner\WebApproval\Test\CorpDomain" value="https://waa-dtna.app.corpintra.net/corporate/"/>
+    <add key="HKEY_LOCAL_MACHINE\SOFTWARE\Freightliner\WebApproval\Production\SupplierDomain"
+      value="https://secure.freightliner.com/supplierapproval/supplier/"/>
+    <add key="PRODPostURL" value="https://dtna-xservices1.prd.freightliner.com:8443/soms/websupplierapproval"/>
+
+  </appSettings>
+
+  <system.web>
+
+    <compilation targetFramework="4.0">
+      <assemblies>
+        <add assembly="Microsoft.VisualBasic, Version=10.0.0.0, Culture=neutral, PublicKeyToken=B03F5F7F11D50A3A"/>
+        <add assembly="Microsoft.VisualBasic.Compatibility, Version=10.0.0.0, Culture=neutral, PublicKeyToken=B03F5F7F11D50A3A"/>
+      </assemblies>
+    </compilation>
+    <!--<httpRuntime targetFramework="4.0"/>-->
+    <sessionState mode="InProc" timeout="60" cookieless="false"/>
+    <pages enableSessionState="ReadOnly"/>
+
+    <membership defaultProvider="ClientAuthenticationMembershipProvider">
+      <providers>
+        <add name="ClientAuthenticationMembershipProvider"
+          type="System.Web.ClientServices.Providers.ClientFormsAuthenticationMembershipProvider, System.Web.Extensions, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35"
+          serviceUri=""/>
+      </providers>
+    </membership>
+    <roleManager defaultProvider="ClientRoleProvider" enabled="true">
+      <providers>
+        <add name="ClientRoleProvider"
+          type="System.Web.ClientServices.Providers.ClientRoleProvider, System.Web.Extensions, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35"
+          serviceUri="" cacheTimeout="86400"/>
+      </providers>
+    </roleManager>
+<!--Ticket No.# 122360 : hiding application/infrastructure details  -->
+  <httpRuntime enableVersionHeader="false"/>
+  </system.web>
+
+  <system.serviceModel>
+    <serviceHostingEnvironment aspNetCompatibilityEnabled="true" multipleSiteBindingsEnabled="true"/>
+
+    <behaviors>
+      <serviceBehaviors>
+        <behavior>
+          <!-- To avoid disclosing metadata information, set the values below to false before deployment -->
+          <serviceMetadata httpGetEnabled="true" httpsGetEnabled="true"/>
+          <!-- To receive exception details in faults for debugging purposes, set the value below to true.  Set to false before deployment to avoid disclosing exception information -->
+          <dataContractSerializer maxItemsInObjectGraph="2147483646"/>
+          <serviceDebug includeExceptionDetailInFaults="true"/>
+        </behavior>
+      </serviceBehaviors>
+      <endpointBehaviors>
+        <behavior name="Endpoint.Behaviors">
+          <dataContractSerializer maxItemsInObjectGraph="2147483646"/>
+        </behavior>
+      </endpointBehaviors>
+    </behaviors>
+    <protocolMapping>
+      <add binding="basicHttpsBinding" scheme="https"/>
+    </protocolMapping>
+    <bindings>
+      <wsHttpBinding>
+        <binding name="WsHttpBinding">
+          <security mode="None"/>
+        </binding>
+      </wsHttpBinding>
+    </bindings>
+    <client>
+      <endpoint address="http://localhost:40099/DataServices/IMSService.svc/soap" binding="wsHttpBinding" bindingConfiguration="WsHttpBinding"
+        contract="IMSService.IIMSService" name="WsHttpBinding">
+        <identity>
+          <servicePrincipalName value="host/SWEBCVD026i"/>
+        </identity>
+      </endpoint>
+    </client>
+  </system.serviceModel>
+
+  <system.webServer>
+    <modules runAllManagedModulesForAllRequests="true"/>
+    <!--
+        To browse web app root directory during debugging, set the value below to true.
+        Set to false before deployment to avoid disclosing web app folder information.
+      -->
+    <!--Ticket No.# 122358 : restrict directory listing  -->
+    <directoryBrowse enabled="false"/>
+     <!--Ticket No.# 122359: HTTP Strict Transport Security and Other Security Related Headers Added  -->
+      <httpProtocol>
+      <customHeaders>
+        <add name="Strict-Transport-Security" value="max-age=31536000; includeSubDomains; preload"/>
+        <add name="Content-Security-Policy"
+        value="default-src 'self' 'unsafe-inline';script-src 'self' 'unsafe-inline' 'unsafe-eval'; connect-src 'self'; img-src 'self'; style-src 'self' 'unsafe-inline' ;base-uri 'self';form-action 'self'"/>
+        <add name="Referrer-Policy" value="no-referrer"/>     
+        <add name="Permissions-Policy" value="accelerometer=(), camera=(), geolocation=(), gyroscope=(), magnetometer=(), microphone=(), payment=(), usb=()"/>
+        <add name="X-Frame-Options" value="SAMEORIGIN"/>      
+        <add name="X-Content-Type-Options" value="nosniff"/>      
+        <add name="X-Permitted-Cross-Domain-Policies" value="none"/>      
+        <add name="X-Download-Options" value="noopen"/>
+
+        <!--Ticket No.# 122360 : hiding application/infrastructure details  -->
+        <remove name="X-Powered-By"/>
+      </customHeaders>
+    </httpProtocol>
+    <!--Ticket No.# 122360 : hiding application/infrastructure details  -->
+    <security>
+      <requestFiltering removeServerHeader="true"/>
+    </security>
+  </system.webServer>
+</configuration>

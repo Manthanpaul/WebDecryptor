@@ -1,0 +1,99 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+	For more information on how to configure your ASP.NET application, please visit
+	http://go.microsoft.com/fwlink/?LinkId=301879
+	-->
+<configuration>
+	<configSections>
+		<!-- For more information on Entity Framework configuration, visit http://go.microsoft.com/fwlink/?LinkID=237468 -->
+		<section name="entityFramework" type="System.Data.Entity.Internal.ConfigFile.EntityFrameworkSection, EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" requirePermission="false" />
+		<!-- For more information on Entity Framework configuration, visit http://go.microsoft.com/fwlink/?LinkID=237468 -->
+
+	</configSections>
+	<connectionStrings>
+		<add name="EncyptedConnectionString" connectionString="Pe5zIETlpC5ZFI/OV01hhtkYJyt1qiWkyFY0CKvdJrrfp0FdTk39++ZieIFl1r7Mli5T+e8vedkHMsF4IqRaeb5GVqJUNACuvOchB2v3NNxcqv4S/okjsdylSBoxBYDPjObHAJ6vmzvbnI3mmk88mP6HhPUyLXSd9aTLXa8dMlxTucOSbX5EuA0BLkOr8NHXuW+06zIi8azXE5rKVmtVr5BtNyeKQHM4" />
+	</connectionStrings>
+
+	<appSettings file="Version.config">
+		<add key="Log" value="1" />
+		<add key="LogFolderPath" value="D:\weblogs\webapplogs\20205_Pricing-Worklist-Upgrade" />
+		<add key="APPID_SKEY" value="1,9,9,8,2,0,0,3" />
+		<add key="APPID_SIV" value="8,6,7,5,3,0,9,9" />
+		<add key="ServerInstance" value="PROD" />
+		<add key="SCHEMA" value="PRODDB2" />
+		<add key="IMSEndPoint" value="https://dtna-mi.us164.corpintra.net:48538/iib-ims-api/v3/ims-generic-service" />
+		<add key="EncyptedConnectionString" value="Pe5zIETlpC5ZFI/OV01hhtkYJyt1qiWkyFY0CKvdJrrfp0FdTk39++ZieIFl1r7Mli5T+e8vedkHMsF4IqRaeb5GVqJUNACuvOchB2v3NNxcqv4S/okjsdylSBoxBYDPjObHAJ6vmzvbnI3mmk88mP6HhPUyLXSd9aTLXa8dMlxTucOSbX5EuA0BLkOr8NHXuW+06zIi8azXE5rKVmtVr5BtNyeKQHM4" />
+	</appSettings>
+	<system.web>
+		<authentication mode="None" />
+		<compilation debug="true" targetFramework="4.5.2" />
+		<httpRuntime targetFramework="4.5.2" />
+		<!--<httpModules>
+			<add name="ApplicationInsightsWebTracking" type="Microsoft.ApplicationInsights.Web.ApplicationInsightsHttpModule, Microsoft.AI.Web" />
+		</httpModules-->
+	</system.web>
+
+	<system.webServer>
+
+
+		<validation validateIntegratedModeConfiguration="false" />
+		<handlers>
+			<remove name="ExtensionlessUrlHandler-Integrated-4.0" />
+			<remove name="OPTIONSVerbHandler" />
+			<remove name="TRACEVerbHandler" />
+			<add name="ExtensionlessUrlHandler-Integrated-4.0" path="*." verb="*" type="System.Web.Handlers.TransferRequestHandler" preCondition="integratedMode,runtimeVersionv4.0" />
+		</handlers>
+	</system.webServer>
+	<runtime>
+		<assemblyBinding xmlns="urn:schemas-microsoft-com:asm.v1">
+
+			<dependentAssembly>
+				<assemblyIdentity name="Newtonsoft.Json" culture="neutral" publicKeyToken="30ad4fe6b2a6aeed" />
+				<bindingRedirect oldVersion="0.0.0.0-6.0.0.0" newVersion="6.0.0.0" />
+			</dependentAssembly>
+			<dependentAssembly>
+				<assemblyIdentity name="System.Web.Optimization" publicKeyToken="31bf3856ad364e35" />
+				<bindingRedirect oldVersion="1.0.0.0-1.1.0.0" newVersion="1.1.0.0" />
+			</dependentAssembly>
+			<dependentAssembly>
+				<assemblyIdentity name="WebGrease" publicKeyToken="31bf3856ad364e35" />
+				<bindingRedirect oldVersion="0.0.0.0-1.5.2.14234" newVersion="1.5.2.14234" />
+			</dependentAssembly>
+			<dependentAssembly>
+				<assemblyIdentity name="System.Web.Helpers" publicKeyToken="31bf3856ad364e35" />
+				<bindingRedirect oldVersion="1.0.0.0-3.0.0.0" newVersion="3.0.0.0" />
+			</dependentAssembly>
+			<dependentAssembly>
+				<assemblyIdentity name="System.Web.Mvc" publicKeyToken="31bf3856ad364e35" />
+				<bindingRedirect oldVersion="1.0.0.0-5.2.3.0" newVersion="5.2.3.0" />
+			</dependentAssembly>
+			<dependentAssembly>
+				<assemblyIdentity name="System.Web.WebPages" publicKeyToken="31bf3856ad364e35" />
+				<bindingRedirect oldVersion="1.0.0.0-3.0.0.0" newVersion="3.0.0.0" />
+			</dependentAssembly>
+			<dependentAssembly>
+				<assemblyIdentity name="System.Web.Http" publicKeyToken="31bf3856ad364e35" culture="neutral" />
+				<bindingRedirect oldVersion="0.0.0.0-5.2.6.0" newVersion="5.2.6.0" />
+			</dependentAssembly>
+			<dependentAssembly>
+				<assemblyIdentity name="System.Net.Http.Formatting" publicKeyToken="31bf3856ad364e35" culture="neutral" />
+				<bindingRedirect oldVersion="0.0.0.0-5.2.6.0" newVersion="5.2.6.0" />
+			</dependentAssembly>
+			<dependentAssembly>
+				<assemblyIdentity name="Ninject" publicKeyToken="c7192dc5380945e7" culture="neutral" />
+				<bindingRedirect oldVersion="0.0.0.0-3.3.4.0" newVersion="3.3.4.0" />
+			</dependentAssembly>
+			<dependentAssembly>
+				<assemblyIdentity name="Ninject.Web.Common" publicKeyToken="c7192dc5380945e7" />
+				<bindingRedirect oldVersion="0.0.0.0-3.3.1.0" newVersion="3.3.1.0" />
+			</dependentAssembly>
+		</assemblyBinding>
+	</runtime>
+	<entityFramework>
+		<defaultConnectionFactory type="IBM.Data.DB2.EntityFramework.DB2ConnectionFactory, IBM.Data.DB2.EntityFramework" />
+		<providers>
+			<provider invariantName="IBM.Data.DB2" type="IBM.Data.DB2.EntityFramework.DB2ProviderServices, IBM.Data.DB2.EntityFramework, Version=10.5.5.6, Culture=neutral, PublicKeyToken=7c307b91aa13d208" />
+		</providers>
+	</entityFramework>
+
+</configuration>
